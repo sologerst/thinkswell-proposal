@@ -15,6 +15,9 @@ function capabilityById(id: string) {
 export function ProposalDocument({ proposal }: { proposal: Proposal }) {
   const included = proposal.scope.items.filter((item) => item.included);
   const optional = proposal.scope.items.filter((item) => !item.included);
+  const includedDuties = included.filter((item) => !item.capabilityId);
+  const includedCapabilities = included.filter((item) => item.capabilityId);
+  const showAmounts = proposal.investment.models.some((model) => model.amount);
 
   return (
     <article className="mx-auto max-w-6xl px-6 pb-24">
@@ -146,67 +149,94 @@ export function ProposalDocument({ proposal }: { proposal: Proposal }) {
         <p className="max-w-3xl text-lg leading-relaxed text-off-white/60">
           {proposal.scope.body}
         </p>
-        <ul className="mt-10 grid gap-4">
-          {included.map((item) => {
-            const capability = capabilityById(item.capabilityId);
-            if (!capability) return null;
-            return (
+        {includedDuties.length > 0 ? (
+          <ul className="mt-10 grid gap-4 md:grid-cols-2">
+            {includedDuties.map((item, index) => (
               <li
-                key={item.capabilityId}
-                className="rounded-2xl border border-teal/20 bg-teal-dim p-5 sm:p-6"
+                key={item.title}
+                className="rounded-2xl border border-teal/20 bg-teal-dim p-5"
               >
-                <div className="flex flex-wrap items-start justify-between gap-3">
-                  <div>
-                    <p className="font-mono text-[11px] tracking-[0.18em] text-teal">
-                      {capability.number} · In scope
-                    </p>
-                    <h3 className="mt-2 font-serif text-2xl font-bold text-off-white">
-                      {capability.title}
-                    </h3>
-                  </div>
-                  <a
-                    href={capability.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1 text-[12px] text-off-white/45 transition-colors hover:text-teal"
-                  >
-                    thinkswell.com
-                    <ArrowUpRight className="size-3.5" />
-                  </a>
-                </div>
-                <p className="mt-3 max-w-3xl text-[15px] leading-relaxed text-off-white/60">
+                <p className="font-mono text-[11px] tracking-[0.18em] text-teal">
+                  {String(index + 1).padStart(2, "0")} · In scope
+                </p>
+                <h3 className="mt-2 font-serif text-xl font-bold text-off-white">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-[14px] leading-relaxed text-off-white/60">
                   {item.notes}
                 </p>
-                <ul className="mt-4 flex flex-wrap gap-2">
-                  {capability.deliverables.map((deliverable) => (
-                    <li
-                      key={deliverable}
-                      className="rounded-full border border-white/10 px-3 py-1 text-[12px] text-off-white/65"
-                    >
-                      {deliverable}
-                    </li>
-                  ))}
-                </ul>
               </li>
-            );
-          })}
-        </ul>
+            ))}
+          </ul>
+        ) : null}
+        {includedCapabilities.length > 0 ? (
+          <ul className={includedDuties.length > 0 ? "mt-4 grid gap-4" : "mt-10 grid gap-4"}>
+            {includedCapabilities.map((item) => {
+              const capability = capabilityById(item.capabilityId ?? "");
+              if (!capability) return null;
+              return (
+                <li
+                  key={item.capabilityId}
+                  className="rounded-2xl border border-teal/20 bg-teal-dim p-5 sm:p-6"
+                >
+                  <div className="flex flex-wrap items-start justify-between gap-3">
+                    <div>
+                      <p className="font-mono text-[11px] tracking-[0.18em] text-teal">
+                        {capability.number} · In scope
+                      </p>
+                      <h3 className="mt-2 font-serif text-2xl font-bold text-off-white">
+                        {capability.title}
+                      </h3>
+                    </div>
+                    <a
+                      href={capability.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1 text-[12px] text-off-white/45 transition-colors hover:text-teal"
+                    >
+                      thinkswell.com
+                      <ArrowUpRight className="size-3.5" />
+                    </a>
+                  </div>
+                  <p className="mt-3 max-w-3xl text-[15px] leading-relaxed text-off-white/60">
+                    {item.notes}
+                  </p>
+                  <ul className="mt-4 flex flex-wrap gap-2">
+                    {capability.deliverables.map((deliverable) => (
+                      <li
+                        key={deliverable}
+                        className="rounded-full border border-white/10 px-3 py-1 text-[12px] text-off-white/65"
+                      >
+                        {deliverable}
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              );
+            })}
+          </ul>
+        ) : null}
         {optional.length > 0 ? (
           <div className="mt-8">
             <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-off-white/35">
-              Available, not in this draft
+              {proposal.investment.highlight
+                ? "Available, not in this retainer"
+                : "Available, not in this draft"}
             </p>
             <ul className="mt-4 grid gap-3 sm:grid-cols-2">
               {optional.map((item) => {
-                const capability = capabilityById(item.capabilityId);
-                if (!capability) return null;
+                const capability = item.capabilityId
+                  ? capabilityById(item.capabilityId)
+                  : undefined;
+                const title = capability?.title ?? item.title;
+                if (!title) return null;
                 return (
                   <li
-                    key={item.capabilityId}
+                    key={item.capabilityId ?? title}
                     className="rounded-2xl border border-white/8 bg-card p-5"
                   >
                     <h3 className="font-serif text-xl font-bold text-off-white">
-                      {capability.title}
+                      {title}
                     </h3>
                     <p className="mt-2 text-[14px] leading-relaxed text-off-white/45">
                       {item.notes}
@@ -245,15 +275,38 @@ export function ProposalDocument({ proposal }: { proposal: Proposal }) {
         </ol>
       </Section>
 
-      <Section id="investment" kicker="06 · Investment" title={proposal.investment.title}>
+      <Section
+        id="investment"
+        kicker={proposal.investment.highlight ? "06 · Budget" : "06 · Investment"}
+        title={proposal.investment.title}
+      >
         <p className="max-w-3xl text-lg leading-relaxed text-off-white/60">
           {proposal.investment.body}
         </p>
+        {proposal.investment.highlight ? (
+          <div className="mt-10 rounded-2xl border border-teal/25 bg-teal-dim p-6 sm:p-8">
+            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-teal">
+              {proposal.investment.highlight.label}
+            </p>
+            <p className="mt-3 font-serif text-5xl font-bold tracking-tight text-off-white sm:text-6xl">
+              {proposal.investment.highlight.amount}
+              <span className="ml-3 font-sans text-lg font-normal text-off-white/50">
+                {proposal.investment.highlight.cadence}
+              </span>
+            </p>
+            <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-off-white/60">
+              {proposal.investment.highlight.detail}
+            </p>
+          </div>
+        ) : null}
         <div className="mt-10 overflow-hidden rounded-2xl border border-white/8">
           <table className="w-full text-left text-sm">
             <thead className="bg-card font-mono text-[10px] uppercase tracking-[0.16em] text-off-white/40">
               <tr>
                 <th className="px-5 py-3 font-medium">Model</th>
+                {showAmounts ? (
+                  <th className="px-5 py-3 font-medium">Amount</th>
+                ) : null}
                 <th className="px-5 py-3 font-medium">Best for</th>
                 <th className="hidden px-5 py-3 font-medium md:table-cell">
                   How we scope
@@ -266,6 +319,11 @@ export function ProposalDocument({ proposal }: { proposal: Proposal }) {
                   <td className="px-5 py-4 font-medium text-off-white">
                     {model.name}
                   </td>
+                  {showAmounts ? (
+                    <td className="px-5 py-4 font-medium text-teal">
+                      {model.amount}
+                    </td>
+                  ) : null}
                   <td className="px-5 py-4 text-off-white/55">{model.bestFor}</td>
                   <td className="hidden px-5 py-4 text-off-white/55 md:table-cell">
                     {model.howWeScope}

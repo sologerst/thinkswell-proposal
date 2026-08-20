@@ -9,10 +9,10 @@ export const brand = {
   email: "tim@thinkswell.com",
   phone: "",
   address: {
-    line1: "1320 Little Hamilton Avenue",
+    line1: "1120 4th Avenue South",
     city: "Nashville",
     state: "TN",
-    zip: "37203",
+    zip: "37210",
   },
   social: {
     instagram: "https://www.instagram.com/thinkswell",

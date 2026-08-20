@@ -1,26 +1,83 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: oklch(13.5% 0.008 285);
+  --foreground: oklch(92% 0.005 65);
+  --card: oklch(16.5% 0.008 285);
+  --card-foreground: oklch(92% 0.005 65);
+  --primary: oklch(84% 0.12 200);
+  --primary-foreground: oklch(13.5% 0.008 285);
+  --muted: oklch(20% 0.008 285);
+  --muted-foreground: oklch(60% 0.01 285);
+  --border: oklch(100% 0 0 / 0.1);
+  --teal: #60dde8;
+  --teal-dim: #60dde81f;
+  --off-white: #f0ede8;
+  --navy: #0e1220;
+  --gold: #f5a623;
+  --purple: #7b2fbe;
+  --radius: 0.5rem;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-teal: var(--teal);
+  --color-teal-dim: var(--teal-dim);
+  --color-off-white: var(--off-white);
+  --color-navy: var(--navy);
+  --color-gold: var(--gold);
+  --color-purple: var(--purple);
+  --font-sans: "Space Grotesk", "Space Grotesk Fallback", ui-sans-serif, system-ui,
+    sans-serif;
+  --font-serif: "Playfair Display", "Playfair Display Fallback", ui-serif, Georgia,
+    serif;
+  --font-mono: "JetBrains Mono", "JetBrains Mono Fallback", ui-monospace, monospace;
+  --radius-sm: calc(var(--radius) * 0.75);
+  --radius-md: calc(var(--radius) * 0.875);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.5);
+  --radius-2xl: calc(var(--radius) * 2);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: color-mix(in oklab, var(--teal) 35%, transparent);
+  color: var(--off-white);
+}
+
+@media print {
+  :root {
+    --background: #ffffff;
+    --foreground: #17161a;
+    --card: #f6f4f0;
+    --off-white: #17161a;
+    --teal: #0b7c86;
+  }
+
+  body {
+    background: white;
+    color: #17161a;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }

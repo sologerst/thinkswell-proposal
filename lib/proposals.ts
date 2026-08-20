@@ -330,17 +330,17 @@ export const blackRiverEntertainment = createProposal({
   clientUrl: "https://www.blackriverent.com",
   clientIndustry: "Record label · Music",
   summary:
-    "Fractional VP of Marketing for the Black River roster — strategy across every client, working alongside existing artist teams, with deeper involvement where it’s needed.",
+    "Fractional CMO for the Black River roster — strategy across every client, working alongside existing artist teams, with deeper involvement where it’s needed.",
   preparedFor: "Black River Entertainment",
   preparedDate: "2026-08-20",
   validUntil: "2026-09-19",
   status: "draft",
   heroEyebrow: "Partnership proposal",
   heroTitle:
-    "A VP of Marketing for the Black River roster — working with the teams already in the building.",
+    "A Fractional CMO for the Black River roster — working with the teams already in the building.",
   heroAccent: "Think smart.",
   intro:
-    "Black River needs someone who can sit in the VP of Marketing seat: set the strategy for the roster, raise the floor for every campaign, and go deeper with the artists who need a hands-on partner. Thinkswell will be that person — not a vendor dropping into one release, and not a replacement for the teams already around those artists.",
+    "Black River needs someone who can sit in the Fractional CMO seat: set the strategy for the roster, raise the floor for every campaign, and go deeper with the artists who need a hands-on partner. Thinkswell will be that person — not a vendor dropping into one release, and not a replacement for the teams already around those artists.",
   visual: {
     stats: [
       { value: "$12,500", label: "Monthly retainer" },
@@ -371,7 +371,7 @@ export const blackRiverEntertainment = createProposal({
   },
   opportunity: {
     title: "The roster needs marketing leadership — not another vendor on one release.",
-    body: "Black River Entertainment is a Nashville independent with a flagship in Kelsea Ballerini, a proven catalog artist in Chris Young, developing names like MaRynn Taylor, and a working bench around them — plus publishing, management, and historic rooms on Music Row. The gap is not “someone to run ads.” It is someone who can sit in the VP of Marketing chair: a point of view for every client, a calendar that holds, and a partner who can work with management, publicity, radio, digital, and creative without stepping on them. Some clients will need Thinkswell in the room. Others already have strong teams — those need a senior strategist: the playbook, the gut-check, the readout. This engagement is built for both.",
+    body: "Black River Entertainment is a Nashville independent with a flagship in Kelsea Ballerini, a proven catalog artist in Chris Young, developing names like MaRynn Taylor, and a working bench around them — plus publishing, management, and historic rooms on Music Row. The gap is not “someone to run ads.” It is someone who can sit in the Fractional CMO chair: a point of view for every client, a calendar that holds, and a partner who can work with management, publicity, radio, digital, and creative without stepping on them. Some clients will need Thinkswell in the room. Others already have strong teams — those need a senior strategist: the playbook, the gut-check, the readout. This engagement is built for both.",
     bullets: [
       "One marketing brain across the roster, so developing artists get the same quality of thinking as the flagship.",
       "Work with existing teams, not around them — management, label staff, publicists, digital, and creative stay in their lanes.",
@@ -384,7 +384,7 @@ export const blackRiverEntertainment = createProposal({
     points: [
       {
         title: "Select clients. Full send.",
-        body: "We don’t run a factory of retainers. Black River gets the people who would otherwise be in the VP seat — strategy, judgment, and follow-through.",
+        body: "We don’t run a factory of retainers. Black River gets the people who would otherwise be in the Fractional CMO seat — strategy, judgment, and follow-through.",
       },
       {
         title: "Entertainment DNA.",
@@ -397,8 +397,8 @@ export const blackRiverEntertainment = createProposal({
     ],
   },
   approach: {
-    title: "One VP seat. Two speeds.",
-    body: "Thinkswell functions as Black River’s VP of Marketing — overseeing strategy for every client, then dialing involvement up or down against the calendar and the team already in place.",
+    title: "One Fractional CMO seat. Two speeds.",
+    body: "Thinkswell functions as Black River’s Fractional CMO — overseeing strategy for every client, then dialing involvement up or down against the calendar and the team already in place.",
     steps: [
       {
         number: "01",
@@ -407,7 +407,7 @@ export const blackRiverEntertainment = createProposal({
       },
       {
         number: "02",
-        title: "Install the VP cadence.",
+        title: "Install the Fractional CMO cadence.",
         body: "Priorities, budgets, creative direction, and a working rhythm with label staff and each artist’s team. Campaigns get a written plan before they spend.",
       },
       {
@@ -418,8 +418,8 @@ export const blackRiverEntertainment = createProposal({
     ],
   },
   scope: {
-    title: "The job is the VP of Marketing job.",
-    body: "This retainer covers the work a VP of Marketing would traditionally own at a record label — strategy, planning, and oversight across the roster. Execution that already lives with an artist’s team stays there. Thinkswell steps in more directly when a client needs it.",
+    title: "The job is the Fractional CMO job.",
+    body: "This retainer covers the work a CMO would traditionally own at a record label — strategy, planning, and oversight across the roster. Execution that already lives with an artist’s team stays there. Thinkswell steps in more directly when a client needs it.",
     items: [
       {
         title: "Roster marketing leadership",
@@ -584,14 +584,14 @@ export const blackRiverEntertainment = createProposal({
     ],
   },
   investment: {
-    title: "One monthly retainer. The VP seat, not a menu of packages.",
-    body: "Thinkswell functions as Black River’s VP of Marketing for a single monthly fee. Media, production, and extra execution sit outside it — and can be added per client when you want more than strategy.",
+    title: "One monthly retainer. The Fractional CMO seat, not a menu of packages.",
+    body: "Thinkswell functions as Black River’s Fractional CMO for a single monthly fee. Media, production, and extra execution sit outside it — and can be added per client when you want more than strategy.",
     highlight: {
       label: "Proposed retainer",
       amount: "$12,500",
       cadence: "per month",
       detail:
-        "Fractional VP of Marketing across the Black River roster. Starting figure — we can lock it on kickoff.",
+        "Fractional CMO across the Black River roster. Starting figure — we can lock it on kickoff.",
       secondary: { amount: "$150,000", label: "annualized" },
     },
     models: [

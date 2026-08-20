@@ -5,9 +5,9 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: "*",
-      allow: "/",
+      allow: "/p/",
+      disallow: "/",
     },
-    sitemap: `${brand.hubUrl}/sitemap.xml`,
     host: brand.hubUrl,
   };
 }

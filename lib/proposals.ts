@@ -18,11 +18,36 @@ export type ProposalSection = {
   icon: SectionIcon;
 };
 
+export type ScopeDutyIcon =
+  | "users"
+  | "sparkles"
+  | "disc"
+  | "calendar"
+  | "waypoints"
+  | "heart"
+  | "audio"
+  | "share"
+  | "megaphone"
+  | "palette"
+  | "handshake"
+  | "ticket"
+  | "dollar"
+  | "usercog"
+  | "chart"
+  | "radar";
+
 export type ScopeItem = {
   capabilityId?: (typeof capabilities)[number]["id"];
   title?: string;
+  icon?: ScopeDutyIcon;
   included: boolean;
   notes: string;
+};
+
+export type ProposalVisual = {
+  stats?: { value: string; label: string }[];
+  tags?: { label: string; items: string[] };
+  modes?: { kicker: string; title: string; body: string }[];
 };
 
 export type TimelinePhase = {
@@ -43,6 +68,7 @@ export type InvestmentHighlight = {
   amount: string;
   cadence: string;
   detail: string;
+  secondary?: { amount: string; label: string };
 };
 
 export type Proposal = {
@@ -60,6 +86,7 @@ export type Proposal = {
   heroTitle: string;
   heroAccent: string;
   intro: string;
+  visual?: ProposalVisual;
   opportunity: {
     title: string;
     body: string;
@@ -314,6 +341,34 @@ export const blackRiverEntertainment = createProposal({
   heroAccent: "Think smart.",
   intro:
     "Black River needs someone who can sit in the VP of Marketing seat: set the strategy for the roster, raise the floor for every campaign, and go deeper with the artists who need a hands-on partner. Thinkswell will be that person — not a vendor dropping into one release, and not a replacement for the teams already around those artists.",
+  visual: {
+    stats: [
+      { value: "$12,500", label: "Monthly retainer" },
+      { value: "Full roster", label: "Every Black River client" },
+      { value: "Two speeds", label: "Hands-on or oversight" },
+    ],
+    tags: {
+      label: "In the room",
+      items: [
+        "Kelsea Ballerini",
+        "Chris Young",
+        "MaRynn Taylor",
+        "Developing roster",
+      ],
+    },
+    modes: [
+      {
+        kicker: "Speed one",
+        title: "Hands-on",
+        body: "Priority campaigns and clients that need Thinkswell in the working sessions — the plan, the brief, the readout, and the next move.",
+      },
+      {
+        kicker: "Speed two",
+        title: "Oversight",
+        body: "Artists who already have a team. We set the playbook, gut-check the work, and stay close enough to catch it before it ships sideways.",
+      },
+    ],
+  },
   opportunity: {
     title: "The roster needs marketing leadership — not another vendor on one release.",
     body: "Black River Entertainment is a Nashville independent with a flagship in Kelsea Ballerini, a proven catalog artist in Chris Young, developing names like MaRynn Taylor, and a working bench around them — plus publishing, management, and historic rooms on Music Row. The gap is not “someone to run ads.” It is someone who can sit in the VP of Marketing chair: a point of view for every client, a calendar that holds, and a partner who can work with management, publicity, radio, digital, and creative without stepping on them. Some clients will need Thinkswell in the room. Others already have strong teams — those need a senior strategist: the playbook, the gut-check, the readout. This engagement is built for both.",
@@ -368,96 +423,112 @@ export const blackRiverEntertainment = createProposal({
     items: [
       {
         title: "Roster marketing leadership",
+        icon: "users",
         included: true,
         notes:
           "A point of view for every Black River client. Priorities, resourcing, and a quality bar that doesn’t only show up for the flagship.",
       },
       {
         title: "Artist brand & positioning",
+        icon: "sparkles",
         included: true,
         notes:
           "Who each artist is in the market, who they’re for, and how that holds up between campaigns — not just the week of a single.",
       },
       {
         title: "Release campaign architecture",
+        icon: "disc",
         included: true,
         notes:
           "Singles, albums, deluxe, anniversary, and the story between them. The plan, the sequence, and the reason it exists.",
       },
       {
         title: "Marketing calendar & sequencing",
+        icon: "calendar",
         included: true,
         notes:
           "Roster-level timing so campaigns don’t cannibalize each other. What’s coming, what waits, and what needs a dedicated push.",
       },
       {
         title: "Cross-functional alignment",
+        icon: "waypoints",
         included: true,
         notes:
           "One marketing plan that A&R, publicity, radio, digital, sales, touring, and management can actually work from.",
       },
       {
         title: "Audience development",
+        icon: "heart",
         included: true,
         notes:
           "Fanbase growth and conversion — from awareness to stream, follow, ticket, and buy. Built for country and the audiences around it.",
       },
       {
         title: "Streaming, DSP & digital strategy",
+        icon: "audio",
         included: true,
         notes:
           "How digital supports radio and live: DSP posture, content, conversion, and the brief for the teams already running the channels.",
       },
       {
         title: "Social & content direction",
+        icon: "share",
         included: true,
         notes:
           "The system and the brief. We set the strategy and the quality bar, then work with existing content teams rather than replacing them.",
       },
       {
         title: "Paid media strategy",
+        icon: "megaphone",
         included: true,
         notes:
           "Mix, testing, and budget recommendations. Buying and trafficking can stay with existing teams, or Thinkswell can take it on as a separate scope.",
       },
       {
         title: "Creative direction",
+        icon: "palette",
         included: true,
         notes:
           "Campaign creative, visual language, and a quality bar. We direct; existing creative partners and in-house teams still make the work.",
       },
       {
         title: "Brand partnerships & collaborations",
+        icon: "handshake",
         included: true,
         notes:
           "Marketing collaborations, brand partnerships, and synch-adjacent opportunities that actually serve the artist — not just a logo on a post.",
       },
       {
         title: "Touring & live marketing",
+        icon: "ticket",
         included: true,
         notes:
           "Coordination with touring, management, and promoters so onsales, routing, and content support the same story as the release.",
       },
       {
         title: "Budget planning & allocation",
+        icon: "dollar",
         included: true,
         notes:
           "Where the money goes across the roster and inside a campaign. Recommendations, tradeoffs, and a clear record of what we spent against.",
       },
       {
         title: "Team & vendor oversight",
+        icon: "usercog",
         included: true,
         notes:
           "Working with managers, publicists, digital, creative, and freelancers already on the artist. We don’t add a parallel org chart.",
       },
       {
         title: "Measurement, reporting & insight",
+        icon: "chart",
         included: true,
         notes:
           "What moved streams, audience, tickets, and why. A monthly readout the label can use — not a vanity dashboard.",
       },
       {
         title: "Competitive & market intelligence",
+        icon: "radar",
         included: true,
         notes:
           "What’s working in country and adjacent formats, and what it means for Black River’s next move — not a research binder that sits in a drawer.",
@@ -520,7 +591,8 @@ export const blackRiverEntertainment = createProposal({
       amount: "$12,500",
       cadence: "per month",
       detail:
-        "Fractional VP of Marketing across the Black River roster. $150,000 annualized. Starting figure — we can lock it on kickoff.",
+        "Fractional VP of Marketing across the Black River roster. Starting figure — we can lock it on kickoff.",
+      secondary: { amount: "$150,000", label: "annualized" },
     },
     models: [
       {

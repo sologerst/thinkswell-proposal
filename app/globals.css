@@ -57,6 +57,13 @@ body {
   font-family: var(--font-sans);
 }
 
+.hero-atmosphere {
+  background:
+    radial-gradient(ellipse 80% 60% at 8% -10%, color-mix(in oklab, var(--teal) 28%, transparent), transparent 55%),
+    radial-gradient(ellipse 50% 50% at 100% 0%, color-mix(in oklab, var(--purple) 32%, transparent), transparent 50%),
+    radial-gradient(ellipse 40% 30% at 60% 100%, color-mix(in oklab, var(--gold) 12%, transparent), transparent 45%);
+}
+
 ::selection {
   background: color-mix(in oklab, var(--teal) 35%, transparent);
   color: var(--off-white);
@@ -79,5 +86,9 @@ body {
   a {
     color: inherit;
     text-decoration: none;
+  }
+
+  .hero-atmosphere {
+    background: none;
   }
 }

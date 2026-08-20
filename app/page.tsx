@@ -1,9 +1,29 @@
+import type { Metadata } from "next";
+import { lockHub } from "@/app/hub-actions";
+import { HubGate } from "@/components/hub-gate";
 import { ProposalCard } from "@/components/proposal-card";
 import { Eyebrow } from "@/components/site-header";
 import { brand } from "@/lib/brand";
+import { isHubUnlocked } from "@/lib/hub-auth";
 import { listProposals } from "@/lib/proposals";
 
-export default function Home() {
+export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
+
+type PageProps = {
+  searchParams: Promise<{ unlock?: string }>;
+};
+
+export default async function Home({ searchParams }: PageProps) {
+  const unlocked = await isHubUnlocked();
+  if (!unlocked) {
+    const params = await searchParams;
+    return <HubGate failed={params.unlock === "failed"} />;
+  }
+
   const proposals = listProposals();
 
   return (
@@ -61,12 +81,22 @@ export default function Home() {
         </p>
       </section>
 
-      <p className="mt-12 text-center text-sm text-off-white/35">
-        Need the public site?{" "}
-        <a className="text-off-white/60 hover:text-teal" href={brand.url}>
-          thinkswell.com
-        </a>
-      </p>
+      <div className="mt-12 flex flex-col items-center gap-3 text-sm text-off-white/35">
+        <p>
+          Need the public site?{" "}
+          <a className="text-off-white/60 hover:text-teal" href={brand.url}>
+            thinkswell.com
+          </a>
+        </p>
+        <form action={lockHub}>
+          <button
+            className="text-off-white/40 underline decoration-white/15 underline-offset-4 transition-colors hover:text-teal"
+            type="submit"
+          >
+            Lock the hub
+          </button>
+        </form>
+      </div>
     </main>
   );
 }

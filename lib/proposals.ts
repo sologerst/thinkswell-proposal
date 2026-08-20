@@ -19,7 +19,8 @@ export type ProposalSection = {
 };
 
 export type ScopeItem = {
-  capabilityId: (typeof capabilities)[number]["id"];
+  capabilityId?: (typeof capabilities)[number]["id"];
+  title?: string;
   included: boolean;
   notes: string;
 };
@@ -32,8 +33,16 @@ export type TimelinePhase = {
 
 export type InvestmentModel = {
   name: string;
+  amount?: string;
   bestFor: string;
   howWeScope: string;
+};
+
+export type InvestmentHighlight = {
+  label: string;
+  amount: string;
+  cadence: string;
+  detail: string;
 };
 
 export type Proposal = {
@@ -79,6 +88,7 @@ export type Proposal = {
   investment: {
     title: string;
     body: string;
+    highlight?: InvestmentHighlight;
     models: InvestmentModel[];
     note: string;
   };
@@ -287,7 +297,280 @@ export const thinkswellPartnership = createProposal({
   },
 });
 
-export const proposals: Proposal[] = [thinkswellPartnership];
+export const blackRiverEntertainment = createProposal({
+  slug: "black-river-entertainment",
+  clientName: "Black River Entertainment",
+  clientUrl: "https://www.blackriverent.com",
+  clientIndustry: "Record label · Music",
+  summary:
+    "Fractional VP of Marketing for the Black River roster — strategy across every client, working alongside existing artist teams, with deeper involvement where it’s needed.",
+  preparedFor: "Black River Entertainment",
+  preparedDate: "2026-08-20",
+  validUntil: "2026-09-19",
+  status: "draft",
+  heroEyebrow: "Partnership proposal",
+  heroTitle:
+    "A VP of Marketing for the Black River roster — working with the teams already in the building.",
+  heroAccent: "Think smart.",
+  intro:
+    "Black River needs someone who can sit in the VP of Marketing seat: set the strategy for the roster, raise the floor for every campaign, and go deeper with the artists who need a hands-on partner. Thinkswell will be that person — not a vendor dropping into one release, and not a replacement for the teams already around those artists.",
+  opportunity: {
+    title: "The roster needs marketing leadership — not another vendor on one release.",
+    body: "Black River Entertainment is a Nashville independent with a flagship in Kelsea Ballerini, a proven catalog artist in Chris Young, developing names like MaRynn Taylor, and a working bench around them — plus publishing, management, and historic rooms on Music Row. The gap is not “someone to run ads.” It is someone who can sit in the VP of Marketing chair: a point of view for every client, a calendar that holds, and a partner who can work with management, publicity, radio, digital, and creative without stepping on them. Some clients will need Thinkswell in the room. Others already have strong teams — those need a senior strategist: the playbook, the gut-check, the readout. This engagement is built for both.",
+    bullets: [
+      "One marketing brain across the roster, so developing artists get the same quality of thinking as the flagship.",
+      "Work with existing teams, not around them — management, label staff, publicists, digital, and creative stay in their lanes.",
+      "Intensity that flexes: hands-on for the campaigns that need it, oversight for the ones that don’t.",
+    ],
+  },
+  why: {
+    title: "Nashville isn’t just where we work. It’s in the work.",
+    body: "Thinkswell is a full-service marketing agency in Nashville built for entertainment brands. We hyper-focus on a small roster of clients — which means Black River gets senior attention, not a junior bench rotating through a giant account list. Music marketing is native here: artists, tours, live events, and the unglamorous work of making a campaign actually hold.",
+    points: [
+      {
+        title: "Select clients. Full send.",
+        body: "We don’t run a factory of retainers. Black River gets the people who would otherwise be in the VP seat — strategy, judgment, and follow-through.",
+      },
+      {
+        title: "Entertainment DNA.",
+        body: "Twenty-plus years marketing country artists, tours, and live events in this town. We know how label, management, radio, digital, and touring actually fit together.",
+      },
+      {
+        title: "Leadership, not a takeover.",
+        body: "We work alongside the teams each artist already has. We don’t replace publicity, radio, or a manager. We make sure marketing has a point of view and a plan.",
+      },
+    ],
+  },
+  approach: {
+    title: "One VP seat. Two speeds.",
+    body: "Thinkswell functions as Black River’s VP of Marketing — overseeing strategy for every client, then dialing involvement up or down against the calendar and the team already in place.",
+    steps: [
+      {
+        number: "01",
+        title: "Map the roster.",
+        body: "Who’s on deck, who has a team, what the next 90 days look like, and where we should be hands-on versus oversight. Nothing useful starts until that’s honest.",
+      },
+      {
+        number: "02",
+        title: "Install the VP cadence.",
+        body: "Priorities, budgets, creative direction, and a working rhythm with label staff and each artist’s team. Campaigns get a written plan before they spend.",
+      },
+      {
+        number: "03",
+        title: "Run two speeds.",
+        body: "Direct involvement on the campaigns that need it. Playbook, review, and course-correct on the ones that don’t. Intensity stays fluid as releases, tours, and teams change.",
+      },
+    ],
+  },
+  scope: {
+    title: "The job is the VP of Marketing job.",
+    body: "This retainer covers the work a VP of Marketing would traditionally own at a record label — strategy, planning, and oversight across the roster. Execution that already lives with an artist’s team stays there. Thinkswell steps in more directly when a client needs it.",
+    items: [
+      {
+        title: "Roster marketing leadership",
+        included: true,
+        notes:
+          "A point of view for every Black River client. Priorities, resourcing, and a quality bar that doesn’t only show up for the flagship.",
+      },
+      {
+        title: "Artist brand & positioning",
+        included: true,
+        notes:
+          "Who each artist is in the market, who they’re for, and how that holds up between campaigns — not just the week of a single.",
+      },
+      {
+        title: "Release campaign architecture",
+        included: true,
+        notes:
+          "Singles, albums, deluxe, anniversary, and the story between them. The plan, the sequence, and the reason it exists.",
+      },
+      {
+        title: "Marketing calendar & sequencing",
+        included: true,
+        notes:
+          "Roster-level timing so campaigns don’t cannibalize each other. What’s coming, what waits, and what needs a dedicated push.",
+      },
+      {
+        title: "Cross-functional alignment",
+        included: true,
+        notes:
+          "One marketing plan that A&R, publicity, radio, digital, sales, touring, and management can actually work from.",
+      },
+      {
+        title: "Audience development",
+        included: true,
+        notes:
+          "Fanbase growth and conversion — from awareness to stream, follow, ticket, and buy. Built for country and the audiences around it.",
+      },
+      {
+        title: "Streaming, DSP & digital strategy",
+        included: true,
+        notes:
+          "How digital supports radio and live: DSP posture, content, conversion, and the brief for the teams already running the channels.",
+      },
+      {
+        title: "Social & content direction",
+        included: true,
+        notes:
+          "The system and the brief. We set the strategy and the quality bar, then work with existing content teams rather than replacing them.",
+      },
+      {
+        title: "Paid media strategy",
+        included: true,
+        notes:
+          "Mix, testing, and budget recommendations. Buying and trafficking can stay with existing teams, or Thinkswell can take it on as a separate scope.",
+      },
+      {
+        title: "Creative direction",
+        included: true,
+        notes:
+          "Campaign creative, visual language, and a quality bar. We direct; existing creative partners and in-house teams still make the work.",
+      },
+      {
+        title: "Brand partnerships & collaborations",
+        included: true,
+        notes:
+          "Marketing collaborations, brand partnerships, and synch-adjacent opportunities that actually serve the artist — not just a logo on a post.",
+      },
+      {
+        title: "Touring & live marketing",
+        included: true,
+        notes:
+          "Coordination with touring, management, and promoters so onsales, routing, and content support the same story as the release.",
+      },
+      {
+        title: "Budget planning & allocation",
+        included: true,
+        notes:
+          "Where the money goes across the roster and inside a campaign. Recommendations, tradeoffs, and a clear record of what we spent against.",
+      },
+      {
+        title: "Team & vendor oversight",
+        included: true,
+        notes:
+          "Working with managers, publicists, digital, creative, and freelancers already on the artist. We don’t add a parallel org chart.",
+      },
+      {
+        title: "Measurement, reporting & insight",
+        included: true,
+        notes:
+          "What moved streams, audience, tickets, and why. A monthly readout the label can use — not a vanity dashboard.",
+      },
+      {
+        title: "Competitive & market intelligence",
+        included: true,
+        notes:
+          "What’s working in country and adjacent formats, and what it means for Black River’s next move — not a research binder that sits in a drawer.",
+      },
+      {
+        capabilityId: "paid",
+        included: false,
+        notes:
+          "Strategy is in the retainer. Media buying, trafficking, and always-on paid can be added per client when Black River wants Thinkswell to run it.",
+      },
+      {
+        capabilityId: "social",
+        included: false,
+        notes:
+          "Direction is in the retainer. Day-to-day community management and content production can be added when a client doesn’t already have that team.",
+      },
+      {
+        capabilityId: "brand",
+        included: false,
+        notes:
+          "Brand strategy and creative direction are in the retainer. A full identity system or guidelines rebuild is a separate project.",
+      },
+      {
+        capabilityId: "web",
+        included: false,
+        notes:
+          "Not in this retainer. Artist sites, landing pages, and conversion work can be scoped when a campaign needs them.",
+      },
+    ],
+  },
+  timeline: {
+    title: "A first 90 days that actually maps the roster.",
+    body: "Exact dates move with Black River’s release calendar. The point of the first quarter is to know every client, install the cadence, and prove the two-speed model.",
+    phases: [
+      {
+        name: "Days 1–21 · Roster read",
+        window: "Weeks 1–3",
+        detail:
+          "Interviews across the label and each artist’s team. Release and touring calendar. A working agreement per client: hands-on, shared, or oversight.",
+      },
+      {
+        name: "Days 22–45 · Playbooks live",
+        window: "Weeks 4–6",
+        detail:
+          "Written strategy for every active client. KPI board. First priority campaigns in motion with the teams already on them.",
+      },
+      {
+        name: "Days 46–90 · Prove the cadence",
+        window: "Weeks 7–12",
+        detail:
+          "Working sessions, campaign reviews, and a monthly roster readout. Adjust intensity as the calendar changes. Recommendation for the next quarter.",
+      },
+    ],
+  },
+  investment: {
+    title: "One monthly retainer. The VP seat, not a menu of packages.",
+    body: "Thinkswell functions as Black River’s VP of Marketing for a single monthly fee. Media, production, and extra execution sit outside it — and can be added per client when you want more than strategy.",
+    highlight: {
+      label: "Proposed retainer",
+      amount: "$12,500",
+      cadence: "per month",
+      detail:
+        "Fractional VP of Marketing across the Black River roster. $150,000 annualized. Starting figure — we can lock it on kickoff.",
+    },
+    models: [
+      {
+        name: "Monthly retainer",
+        amount: "$12,500",
+        bestFor: "Ongoing marketing leadership for every Black River client",
+        howWeScope:
+          "Strategy, planning, and oversight across the roster. Hands-on where the artist needs it; playbook and review where their team is already staffed.",
+      },
+      {
+        name: "Optional execution",
+        amount: "Scoped separately",
+        bestFor: "When a client needs Thinkswell to buy media, run social, or build a site",
+        howWeScope:
+          "Written as a separate SOW. Not assumed in the $12,500 retainer.",
+      },
+    ],
+    note: "Proposed starting retainer: $12,500 per month ($150,000 annualized). Media spend, production, photography, video, influencers, and radio promo buys sit with Black River or the artist. Term and notice to be confirmed at kickoff.",
+  },
+  success: {
+    title: "We measure whether marketing actually has a plan — and whether it moved something.",
+    body: "Vanity metrics stay in the appendix. The scoreboard is the roster.",
+    metrics: [
+      "Every active client has a written marketing plan — not just the flagship",
+      "Campaigns have a strategy before they spend",
+      "Existing teams know who owns what — less overlap, fewer dropped balls",
+      "Movement on streams, audience, and live support where marketing has a lever",
+      "A monthly readout the label can actually use",
+      "A clear record of which clients needed hands-on vs. oversight, and why",
+    ],
+  },
+  nextSteps: {
+    title: "If this is the seat, here’s how we start.",
+    body: "We respond within one business day. No spam, ever.",
+    steps: [
+      "Walk the current roster and the next 90 days of releases together.",
+      "Mark which clients need hands-on Thinkswell and which need oversight.",
+      "Confirm the $12,500 monthly retainer and a start date.",
+      "Kickoff begins with the roster read. Nothing launches until we agree on the why.",
+    ],
+  },
+  sections: DEFAULT_SECTIONS.map((section) =>
+    section.id === "investment" ? { ...section, title: "Budget" } : section,
+  ),
+});
+
+export const proposals: Proposal[] = [
+  blackRiverEntertainment,
+  thinkswellPartnership,
+];
 
 export function getProposal(slug: string) {
   return proposals.find((proposal) => proposal.slug === slug);

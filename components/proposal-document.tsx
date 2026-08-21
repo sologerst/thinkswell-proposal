@@ -115,7 +115,28 @@ export function ProposalDocument({ proposal }: { proposal: Proposal }) {
               </dl>
             ) : null}
 
-            {visual?.tags ? (
+            {visual?.releases ? (
+              <div className="mt-6">
+                <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-off-white/35">
+                  {visual.releases.label}
+                </p>
+                <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+                  {visual.releases.items.map((release) => (
+                    <li
+                      key={release.artist}
+                      className="rounded-2xl border border-white/12 bg-white/[0.04] px-4 py-3"
+                    >
+                      <p className="font-serif text-lg font-bold text-off-white">
+                        {release.artist}
+                      </p>
+                      <p className="mt-0.5 font-mono text-[11px] tracking-[0.14em] text-teal/80">
+                        {release.slate}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : visual?.tags ? (
               <div className="mt-6">
                 <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-off-white/35">
                   {visual.tags.label}
@@ -290,7 +311,7 @@ export function ProposalDocument({ proposal }: { proposal: Proposal }) {
                   {index === 0 && visual.modes && visual.modes.length > 1 ? (
                     <div className="hidden items-center justify-center px-1 md:flex">
                       <span className="rounded-full border border-white/12 px-3 py-1 font-mono text-[10px] tracking-[0.16em] text-off-white/45">
-                        Flex
+                        {visual.modesConnector ?? "Flex"}
                       </span>
                     </div>
                   ) : null}

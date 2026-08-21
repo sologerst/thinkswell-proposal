@@ -47,7 +47,12 @@ export type ScopeItem = {
 export type ProposalVisual = {
   stats?: { value: string; label: string }[];
   tags?: { label: string; items: string[] };
+  releases?: {
+    label: string;
+    items: { artist: string; slate: string }[];
+  };
   modes?: { kicker: string; title: string; body: string }[];
+  modesConnector?: string;
 };
 
 export type TimelinePhase = {
@@ -330,52 +335,53 @@ export const blackRiverEntertainment = createProposal({
   clientUrl: "https://www.blackriverent.com",
   clientIndustry: "Record label · Music",
   summary:
-    "Fractional CMO for the Black River roster — strategy across every client, working alongside existing artist teams, with deeper involvement where it’s needed.",
+    "Fractional CMO for Black River’s remaining 2026 priority releases — digital marketing support and strategic social direction, all-in for campaign planning, reporting, content, and creative.",
   preparedFor: "Black River Entertainment",
-  preparedDate: "2026-08-20",
+  preparedDate: "2026-08-21",
   validUntil: "2026-09-19",
   status: "draft",
   heroEyebrow: "Partnership proposal",
   heroTitle:
-    "A Fractional CMO for the Black River roster — working with the teams already in the building.",
+    "A Fractional CMO on the 2026 priority slate — digital marketing and strategic social, with the teams already in the building.",
   heroAccent: "Think smart.",
   intro:
-    "Black River needs someone who can sit in the Fractional CMO seat: set the strategy for the roster, raise the floor for every campaign, and go deeper with the artists who need a hands-on partner. Thinkswell will be that person — not a vendor dropping into one release, and not a replacement for the teams already around those artists.",
+    "Black River asked for digital marketing support and strategic social media direction on the remaining 2026 priority releases: John Cooper Albright, Matt Stell, MaRynn Taylor, and a TBA male artist. Thinkswell will sit in the Fractional CMO seat for that slate — campaign planning, reporting, content, and creative, all-in. The Orchard currently advises and admins paid media; we can take that when you’re ready to shift.",
   visual: {
     stats: [
-      { value: "$12,500", label: "Monthly retainer" },
-      { value: "Full roster", label: "Every Black River client" },
-      { value: "Two speeds", label: "Hands-on or oversight" },
+      { value: "$12,500", label: "All-in monthly" },
+      { value: "Rest of 2026", label: "Priority slate" },
+      { value: "4 artists", label: "Digital + social" },
     ],
-    tags: {
-      label: "In the room",
+    releases: {
+      label: "2026 priority releases",
       items: [
-        "Kelsea Ballerini",
-        "Chris Young",
-        "MaRynn Taylor",
-        "Developing roster",
+        { artist: "John Cooper Albright", slate: "1 single" },
+        { artist: "Matt Stell", slate: "2–3 singles" },
+        { artist: "MaRynn Taylor", slate: "1 single + 1 EP" },
+        { artist: "TBA male artist", slate: "TBD, as discussed" },
       ],
     },
+    modesConnector: "All-in",
     modes: [
       {
-        kicker: "Speed one",
-        title: "Hands-on",
-        body: "Priority campaigns and clients that need Thinkswell in the working sessions — the plan, the brief, the readout, and the next move.",
+        kicker: "In the retainer",
+        title: "Digital marketing",
+        body: "Campaign planning, paid strategy, reporting, content, and creative on the named 2026 releases — not a pile of ads without a plan.",
       },
       {
-        kicker: "Speed two",
-        title: "Oversight",
-        body: "Artists who already have a team. We set the playbook, gut-check the work, and stay close enough to catch it before it ships sideways.",
+        kicker: "In the retainer",
+        title: "Strategic social",
+        body: "Direction and campaign content for each release. We set the system and the quality bar, then ship with the teams already around the artist.",
       },
     ],
   },
   opportunity: {
-    title: "The roster needs marketing leadership — not another vendor on one release.",
-    body: "Black River Entertainment is a Nashville independent with a flagship in Kelsea Ballerini, a proven catalog artist in Chris Young, developing names like MaRynn Taylor, and a working bench around them — plus publishing, management, and historic rooms on Music Row. The gap is not “someone to run ads.” It is someone who can sit in the Fractional CMO chair: a point of view for every client, a calendar that holds, and a partner who can work with management, publicity, radio, digital, and creative without stepping on them. Some clients will need Thinkswell in the room. Others already have strong teams — those need a senior strategist: the playbook, the gut-check, the readout. This engagement is built for both.",
+    title: "The rest of 2026 has a slate. It needs a digital and social plan — not another vendor on one single.",
+    body: "Black River named the work: digital marketing support and strategic social media direction on the priority releases still on the board this year. John Cooper Albright has a single. Matt Stell has two, maybe three. MaRynn Taylor has a single and an EP. A TBA male artist is in conversation. The Orchard currently advises and admins paid media — and Grace flagged that Black River is open to shifting that in the coming months. Thinkswell will sit in the Fractional CMO chair for this slate: a point of view per release, a calendar that holds, and a partner who can work with management, publicity, radio, digital, The Orchard, and creative without stepping on them.",
     bullets: [
-      "One marketing brain across the roster, so developing artists get the same quality of thinking as the flagship.",
-      "Work with existing teams, not around them — management, label staff, publicists, digital, and creative stay in their lanes.",
-      "Intensity that flexes: hands-on for the campaigns that need it, oversight for the ones that don’t.",
+      "Digital marketing and strategic social built around the named 2026 releases — Albright, Stell, Taylor, and the TBA male artist.",
+      "All-in for campaign planning, reporting, content, and creative. Not a strategy deck that someone else has to finish.",
+      "Paid can stay with The Orchard until Black River wants to move it. We plan for that shift; we don’t force it.",
     ],
   },
   why: {
@@ -384,7 +390,7 @@ export const blackRiverEntertainment = createProposal({
     points: [
       {
         title: "Select clients. Full send.",
-        body: "We don’t run a factory of retainers. Black River gets the people who would otherwise be in the Fractional CMO seat — strategy, judgment, and follow-through.",
+        body: "We don’t run a factory of retainers. Black River gets senior people on the 2026 slate — strategy, judgment, content, and follow-through.",
       },
       {
         title: "Entertainment DNA.",
@@ -392,41 +398,48 @@ export const blackRiverEntertainment = createProposal({
       },
       {
         title: "Leadership, not a takeover.",
-        body: "We work alongside the teams each artist already has. We don’t replace publicity, radio, or a manager. We make sure marketing has a point of view and a plan.",
+        body: "We work alongside the teams each artist already has — including The Orchard on paid until you want that to move. We don’t replace publicity, radio, or a manager. We make sure digital and social have a point of view and a plan.",
       },
     ],
   },
   approach: {
-    title: "One Fractional CMO seat. Two speeds.",
-    body: "Thinkswell functions as Black River’s Fractional CMO — overseeing strategy for every client, then dialing involvement up or down against the calendar and the team already in place.",
+    title: "One Fractional CMO seat. Digital and social, all-in.",
+    body: "Thinkswell functions as Black River’s Fractional CMO for the remaining 2026 priority releases — digital marketing support and strategic social direction, with campaign planning, reporting, content, and creative in the retainer.",
     steps: [
       {
         number: "01",
-        title: "Map the roster.",
-        body: "Who’s on deck, who has a team, what the next 90 days look like, and where we should be hands-on versus oversight. Nothing useful starts until that’s honest.",
+        title: "Lock the slate.",
+        body: "Confirm dates and assets for Albright, Stell, Taylor, and the TBA male artist. Map what’s already in motion with label staff, each artist’s team, and The Orchard. Nothing useful starts until that’s honest.",
       },
       {
         number: "02",
-        title: "Install the Fractional CMO cadence.",
-        body: "Priorities, budgets, creative direction, and a working rhythm with label staff and each artist’s team. Campaigns get a written plan before they spend.",
+        title: "Install the campaign cadence.",
+        body: "A written plan per priority release: digital, social, content, creative, and reporting. Working rhythm with label staff and each artist’s team. Campaigns get a plan before they spend.",
       },
       {
         number: "03",
-        title: "Run two speeds.",
-        body: "Direct involvement on the campaigns that need it. Playbook, review, and course-correct on the ones that don’t. Intensity stays fluid as releases, tours, and teams change.",
+        title: "Run the rest of 2026. Stand ready on paid.",
+        body: "Ship digital and social on each release. Report what moved. The Orchard stays on paid until Black River wants to shift — then Thinkswell can take buying without ripping up the rest of the engagement.",
       },
     ],
   },
   scope: {
-    title: "The job is the Fractional CMO job.",
-    body: "This retainer covers the work a CMO would traditionally own at a record label — strategy, planning, and oversight across the roster. Execution that already lives with an artist’s team stays there. Thinkswell steps in more directly when a client needs it.",
+    title: "The job is the Fractional CMO job — aimed at this 2026 slate.",
+    body: "This retainer is all-in for campaign planning, reporting, content, and creative. Digital marketing support and strategic social direction sit on the named remaining-2026 releases. Execution that already lives with an artist’s team or The Orchard stays there until Black River wants it to move.",
     items: [
+      {
+        title: "2026 priority-release slate",
+        icon: "disc",
+        included: true,
+        notes:
+          "John Cooper Albright (1 single), Matt Stell (2–3 singles), MaRynn Taylor (1 single + 1 EP), and a TBA male artist as discussed. Digital and social are built around these campaigns for the balance of 2026.",
+      },
       {
         title: "Roster marketing leadership",
         icon: "users",
         included: true,
         notes:
-          "A point of view for every Black River client. Priorities, resourcing, and a quality bar that doesn’t only show up for the flagship.",
+          "A point of view for Albright, Stell, Taylor, and the TBA male artist. Priorities, resourcing, and a quality bar that shows up for every priority release — not only the ones with the most infrastructure.",
       },
       {
         title: "Artist brand & positioning",
@@ -440,14 +453,14 @@ export const blackRiverEntertainment = createProposal({
         icon: "disc",
         included: true,
         notes:
-          "Singles, albums, deluxe, anniversary, and the story between them. The plan, the sequence, and the reason it exists.",
+          "Singles, EPs, and the story between them on this 2026 slate. The plan, the sequence, and the reason it exists — before anything spends.",
       },
       {
         title: "Marketing calendar & sequencing",
         icon: "calendar",
         included: true,
         notes:
-          "Roster-level timing so campaigns don’t cannibalize each other. What’s coming, what waits, and what needs a dedicated push.",
+          "Timing across the 2026 priority slate so campaigns don’t cannibalize each other. What’s coming, what waits, and what needs a dedicated push.",
       },
       {
         title: "Cross-functional alignment",
@@ -464,32 +477,32 @@ export const blackRiverEntertainment = createProposal({
           "Fanbase growth and conversion — from awareness to stream, follow, ticket, and buy. Built for country and the audiences around it.",
       },
       {
-        title: "Streaming, DSP & digital strategy",
+        title: "Digital marketing support",
         icon: "audio",
         included: true,
         notes:
-          "How digital supports radio and live: DSP posture, content, conversion, and the brief for the teams already running the channels.",
+          "How digital supports radio and live on each priority release: DSP posture, content, conversion, and the brief for the teams already running the channels.",
       },
       {
-        title: "Social & content direction",
+        title: "Strategic social media direction",
         icon: "share",
         included: true,
         notes:
-          "The system and the brief. We set the strategy and the quality bar, then work with existing content teams rather than replacing them.",
+          "Strategic social for each 2026 priority release — the system, the brief, and campaign content. We set the quality bar, then work with existing content teams rather than replacing them. Day-to-day community can stay where it already lives.",
       },
       {
         title: "Paid media strategy",
         icon: "megaphone",
         included: true,
         notes:
-          "Mix, testing, and budget recommendations. Buying and trafficking can stay with existing teams, or Thinkswell can take it on as a separate scope.",
+          "Mix, testing, and budget recommendations. The Orchard currently advises and admins paid media; Black River is open to shifting that in the coming months. Strategy is in this retainer now. Buying and trafficking can move to Thinkswell when you’re ready.",
       },
       {
         title: "Creative direction",
         icon: "palette",
         included: true,
         notes:
-          "Campaign creative, visual language, and a quality bar. We direct; existing creative partners and in-house teams still make the work.",
+          "Campaign content and creative is in the all-in retainer — planning through deliverables for these releases. Existing partners and in-house teams can still make work; Thinkswell can too. A full identity rebuild is a separate project.",
       },
       {
         title: "Brand partnerships & collaborations",
@@ -510,21 +523,21 @@ export const blackRiverEntertainment = createProposal({
         icon: "dollar",
         included: true,
         notes:
-          "Where the money goes across the roster and inside a campaign. Recommendations, tradeoffs, and a clear record of what we spent against.",
+          "Where the money goes across the 2026 slate and inside a campaign. Recommendations, tradeoffs, and a clear record of what we spent against.",
       },
       {
         title: "Team & vendor oversight",
         icon: "usercog",
         included: true,
         notes:
-          "Working with managers, publicists, digital, creative, and freelancers already on the artist. We don’t add a parallel org chart.",
+          "Working with managers, publicists, digital, The Orchard, creative, and freelancers already on the artist. We don’t add a parallel org chart.",
       },
       {
         title: "Measurement, reporting & insight",
         icon: "chart",
         included: true,
         notes:
-          "What moved streams, audience, tickets, and why. A monthly readout the label can use — not a vanity dashboard.",
+          "What moved streams, audience, tickets, and why — per release, not a vanity dashboard. Reporting is in the all-in retainer.",
       },
       {
         title: "Competitive & market intelligence",
@@ -537,13 +550,13 @@ export const blackRiverEntertainment = createProposal({
         capabilityId: "paid",
         included: false,
         notes:
-          "Strategy is in the retainer. Media buying, trafficking, and always-on paid can be added per client when Black River wants Thinkswell to run it.",
+          "The Orchard currently advises and admins paid. When Black River wants to make that shift, Thinkswell can take buying, trafficking, and always-on — written as a separate SOW or folded into the retainer.",
       },
       {
         capabilityId: "social",
         included: false,
         notes:
-          "Direction is in the retainer. Day-to-day community management and content production can be added when a client doesn’t already have that team.",
+          "Strategic direction and campaign content are in the retainer. Day-to-day community management can be added when a client doesn’t already have that team.",
       },
       {
         capabilityId: "brand",
@@ -560,78 +573,78 @@ export const blackRiverEntertainment = createProposal({
     ],
   },
   timeline: {
-    title: "A first 90 days that actually maps the roster.",
-    body: "Exact dates move with Black River’s release calendar. The point of the first quarter is to know every client, install the cadence, and prove the two-speed model.",
+    title: "The balance of 2026, mapped to the releases you named.",
+    body: "Exact dates move with Black River’s calendar. The point of the rest of this year is to plan and ship digital and social on Albright, Stell, Taylor, and the TBA male artist — and to be ready if paid moves off The Orchard.",
     phases: [
       {
-        name: "Days 1–21 · Roster read",
-        window: "Weeks 1–3",
+        name: "Now · Lock the slate",
+        window: "Weeks 1–2",
         detail:
-          "Interviews across the label and each artist’s team. Release and touring calendar. A working agreement per client: hands-on, shared, or oversight.",
+          "Confirm dates and assets for John Cooper Albright, Matt Stell, MaRynn Taylor, and the TBA male artist. Map what’s already in motion with label staff, each artist’s team, and The Orchard.",
       },
       {
-        name: "Days 22–45 · Playbooks live",
-        window: "Weeks 4–6",
+        name: "Through Q4 · Run the 2026 slate",
+        window: "Balance of 2026",
         detail:
-          "Written strategy for every active client. KPI board. First priority campaigns in motion with the teams already on them.",
+          "Digital marketing and strategic social on each priority release. Campaign planning, content, creative, and reporting — all-in. Hands-on where the campaign needs it.",
       },
       {
-        name: "Days 46–90 · Prove the cadence",
-        window: "Weeks 7–12",
+        name: "When you’re ready · Paid shift",
+        window: "Coming months",
         detail:
-          "Working sessions, campaign reviews, and a monthly roster readout. Adjust intensity as the calendar changes. Recommendation for the next quarter.",
+          "The Orchard stays on paid until Black River wants to move. Thinkswell can take buying and trafficking without ripping up the rest of the engagement.",
       },
     ],
   },
   investment: {
-    title: "One monthly retainer. The Fractional CMO seat, not a menu of packages.",
-    body: "Thinkswell functions as Black River’s Fractional CMO for a single monthly fee. Media, production, and extra execution sit outside it — and can be added per client when you want more than strategy.",
+    title: "One monthly retainer. All-in for planning, reporting, content, and creative.",
+    body: "The $12,500 monthly retainer is all-in for campaign planning, reporting, content, and creative — digital marketing support and strategic social direction on the 2026 priority slate. Media spend stays with Black River. The Orchard currently advises and admins paid; Thinkswell can take that when you want to shift.",
     highlight: {
       label: "Proposed retainer",
       amount: "$12,500",
-      cadence: "per month",
+      cadence: "per month, all-in",
       detail:
-        "Fractional CMO across the Black River roster. Starting figure — we can lock it on kickoff.",
+        "Campaign planning, reporting, content, and creative across the remaining 2026 priority releases. Starting figure — we can lock it on kickoff.",
       secondary: { amount: "$150,000", label: "annualized" },
     },
     models: [
       {
         name: "Monthly retainer",
         amount: "$12,500",
-        bestFor: "Ongoing marketing leadership for every Black River client",
+        bestFor: "Digital marketing and strategic social on the 2026 priority slate",
         howWeScope:
-          "Strategy, planning, and oversight across the roster. Hands-on where the artist needs it; playbook and review where their team is already staffed.",
+          "All-in for campaign planning, reporting, content, and creative. Fractional CMO seat aimed at Albright, Stell, Taylor, and the TBA male artist.",
       },
       {
-        name: "Optional execution",
-        amount: "Scoped separately",
-        bestFor: "When a client needs Thinkswell to buy media, run social, or build a site",
+        name: "Paid media takeover",
+        amount: "When you shift",
+        bestFor: "If and when paid moves off The Orchard",
         howWeScope:
-          "Written as a separate SOW. Not assumed in the $12,500 retainer.",
+          "Buying, trafficking, and always-on. Written as a separate SOW or folded into the retainer. Not assumed on day one.",
       },
     ],
-    note: "Proposed starting retainer: $12,500 per month ($150,000 annualized). Media spend, production, photography, video, influencers, and radio promo buys sit with Black River or the artist. Term and notice to be confirmed at kickoff.",
+    note: "Proposed starting retainer: $12,500 per month, all-in for campaign planning, reporting, content, and creative ($150,000 annualized). Media spend, photography, video production, influencers, and radio promo buys sit with Black River or the artist. The Orchard continues to advise and admin paid until Black River wants that to move. Term and notice to be confirmed at kickoff.",
   },
   success: {
-    title: "We measure whether marketing actually has a plan — and whether it moved something.",
-    body: "Vanity metrics stay in the appendix. The scoreboard is the roster.",
+    title: "We measure whether each priority release had a plan — and whether it moved something.",
+    body: "Vanity metrics stay in the appendix. The scoreboard is the 2026 slate.",
     metrics: [
-      "Every active client has a written marketing plan — not just the flagship",
+      "Albright, Stell, Taylor, and the TBA male artist each have a written digital and social plan",
       "Campaigns have a strategy before they spend",
-      "Existing teams know who owns what — less overlap, fewer dropped balls",
+      "Content and creative ship on the campaign calendar, not as an afterthought",
+      "A readout the label can actually use after each release",
+      "The Orchard relationship is clear — stay, or a written plan to shift paid",
       "Movement on streams, audience, and live support where marketing has a lever",
-      "A monthly readout the label can actually use",
-      "A clear record of which clients needed hands-on vs. oversight, and why",
     ],
   },
   nextSteps: {
     title: "If this is the seat, here’s how we start.",
     body: "We respond within one business day. No spam, ever.",
     steps: [
-      "Walk the current roster and the next 90 days of releases together.",
-      "Mark which clients need hands-on Thinkswell and which need oversight.",
-      "Confirm the $12,500 monthly retainer and a start date.",
-      "Kickoff begins with the roster read. Nothing launches until we agree on the why.",
+      "Walk the remaining 2026 slate together — Albright, Stell, Taylor, and the TBA male artist.",
+      "Map what’s already in motion with The Orchard, Grace, and each artist’s team.",
+      "Confirm the $12,500 all-in monthly retainer and a start date.",
+      "Kickoff begins with the first priority release. Nothing launches until we agree on the why.",
     ],
   },
   sections: DEFAULT_SECTIONS.map((section) =>

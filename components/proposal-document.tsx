@@ -688,7 +688,7 @@ export function ProposalDocument({ proposal }: { proposal: Proposal }) {
           <div className="relative mt-12 overflow-hidden rounded-2xl border border-teal/25 bg-teal-dim p-6 sm:p-8">
             <span className="print:hidden pointer-events-none absolute -right-10 -bottom-16 size-48 rounded-full bg-teal/20 blur-3xl" />
             <p className="relative font-serif text-3xl font-bold text-off-white">
-              Let’s build something.
+              Happy to get started.
             </p>
             <p className="relative mt-3 max-w-xl text-off-white/60">
               {brand.founder.name}, {brand.founder.title} · {brand.address.line1},{" "}

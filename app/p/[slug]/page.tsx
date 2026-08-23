@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: "Proposal not found" };
   }
 
-  const title = `${proposal.clientName} — Proposal`;
+  const title = `${proposal.clientName} · Proposal`;
   const description = proposal.summary;
 
   return {

@@ -8,7 +8,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(brand.hubUrl),
   title: {
-    default: "Thinkswell — Proposal Hub",
+    default: "Thinkswell Proposal Hub",
     template: "%s · Thinkswell Proposal Hub",
   },
   description:

@@ -11,7 +11,7 @@ export function HubGate({ failed }: { failed?: boolean }) {
         </h1>
         <p className="mt-4 text-[15px] leading-relaxed text-off-white/55">
           The proposal index is for Thinkswell. If you were sent a proposal,
-          open the full link you received —{" "}
+          open the full link you received.{" "}
           <span className="text-off-white/80">/p/your-proposal</span> stays
           public.
         </p>

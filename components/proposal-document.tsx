@@ -57,6 +57,61 @@ function capabilityById(id: string) {
   return capabilities.find((item) => item.id === id);
 }
 
+function resolveIncludes(item: Proposal["scope"]["items"][number]): string[] {
+  if (item.includes?.length) return item.includes;
+  const capability = item.capabilityId
+    ? capabilityById(item.capabilityId)
+    : undefined;
+  return capability?.includes ? [...capability.includes] : [];
+}
+
+function IncludesList({
+  items,
+  label = "What’s included",
+  muted = false,
+}: {
+  items: string[];
+  label?: string;
+  muted?: boolean;
+}) {
+  if (items.length === 0) return null;
+  return (
+    <div className="mt-4">
+      <p
+        className={
+          muted
+            ? "font-mono text-[10px] uppercase tracking-[0.18em] text-off-white/30"
+            : "font-mono text-[10px] uppercase tracking-[0.18em] text-off-white/40"
+        }
+      >
+        {label}
+      </p>
+      <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+        {items.map((entry) => (
+          <li
+            key={entry}
+            className={
+              muted
+                ? "flex gap-2 text-[13px] leading-relaxed text-off-white/45"
+                : "flex gap-2 text-[13px] leading-relaxed text-off-white/70"
+            }
+          >
+            <Check
+              className={
+                muted
+                  ? "mt-0.5 size-3.5 shrink-0 text-off-white/30"
+                  : "mt-0.5 size-3.5 shrink-0 text-teal"
+              }
+              strokeWidth={2.5}
+            />
+            <span>{entry}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 export function ProposalDocument({ proposal }: { proposal: Proposal }) {
   const included = proposal.scope.items.filter((item) => item.included);
   const optional = proposal.scope.items.filter((item) => !item.included);
@@ -352,27 +407,36 @@ export function ProposalDocument({ proposal }: { proposal: Proposal }) {
             {proposal.scope.body}
           </p>
           {includedDuties.length > 0 ? (
-            <ul className="mt-10 grid gap-3 sm:grid-cols-2">
+            <ul
+              className={
+                includedDuties.some((item) => resolveIncludes(item).length > 0)
+                  ? "mt-10 grid gap-4"
+                  : "mt-10 grid gap-3 sm:grid-cols-2"
+              }
+            >
               {includedDuties.map((item, index) => {
                 const Icon = item.icon ? dutyIcons[item.icon] : Layers;
                 return (
                   <li
                     key={item.title}
-                    className="flex gap-4 rounded-2xl border border-teal/20 bg-teal-dim p-5"
+                    className="rounded-2xl border border-teal/20 bg-teal-dim p-5 sm:p-6"
                   >
-                    <div className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-teal/25 bg-background/40">
-                      <Icon className="size-5 text-teal" strokeWidth={1.5} />
-                    </div>
-                    <div className="min-w-0">
-                      <p className="font-mono text-[11px] tracking-[0.18em] text-teal">
-                        {String(index + 1).padStart(2, "0")}
-                      </p>
-                      <h3 className="mt-1 font-serif text-xl font-bold text-off-white">
-                        {item.title}
-                      </h3>
-                      <p className="mt-2 text-[14px] leading-relaxed text-off-white/60">
-                        {item.notes}
-                      </p>
+                    <div className="flex gap-4">
+                      <div className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-teal/25 bg-background/40">
+                        <Icon className="size-5 text-teal" strokeWidth={1.5} />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <p className="font-mono text-[11px] tracking-[0.18em] text-teal">
+                          {String(index + 1).padStart(2, "0")}
+                        </p>
+                        <h3 className="mt-1 font-serif text-xl font-bold text-off-white sm:text-2xl">
+                          {item.title}
+                        </h3>
+                        <p className="mt-2 text-[14px] leading-relaxed text-off-white/60 sm:text-[15px]">
+                          {item.notes}
+                        </p>
+                        <IncludesList items={resolveIncludes(item)} />
+                      </div>
                     </div>
                   </li>
                 );
@@ -425,6 +489,7 @@ export function ProposalDocument({ proposal }: { proposal: Proposal }) {
                         </li>
                       ))}
                     </ul>
+                    <IncludesList items={resolveIncludes(item)} />
                   </li>
                 );
               })}
@@ -455,6 +520,11 @@ export function ProposalDocument({ proposal }: { proposal: Proposal }) {
                       <p className="mt-2 text-[14px] leading-relaxed text-off-white/45">
                         {item.notes}
                       </p>
+                      <IncludesList
+                        items={resolveIncludes(item)}
+                        label="If added"
+                        muted
+                      />
                     </li>
                   );
                 })}

@@ -42,6 +42,8 @@ export type ScopeItem = {
   icon?: ScopeDutyIcon;
   included: boolean;
   notes: string;
+  /** Concrete work inside this service. Falls back to the capability includes list. */
+  includes?: string[];
 };
 
 export type ProposalVisual = {
@@ -226,38 +228,44 @@ export const thinkswellPartnership = createProposal({
     ],
   },
   scope: {
-    title: "Six capabilities. One unified team.",
-    body: "Toggle what’s in-scope for the client. Everything below is available; include only what the engagement needs. Copy lives on thinkswell.com if you want the long version.",
+    title: "Six services. One team. Here’s what each one actually includes.",
+    body: "Toggle what’s in-scope for the client. Everything below is available; include only what the engagement needs. Each service lists the concrete work, not a slogan.",
     items: [
       {
         capabilityId: "strategy",
         included: true,
-        notes: "Kickoff research, positioning, campaign architecture, and the KPI board we’ll run the engagement on.",
+        notes:
+          "The playbook the rest of the engagement runs on — audience, offer, architecture, and the KPI board. Nothing launches until this is honest.",
       },
       {
         capabilityId: "paid",
         included: true,
-        notes: "Always-on and calendar-led campaigns across Meta, Google, TikTok, and programmatic as the brief requires.",
+        notes:
+          "Always-on and calendar-led campaigns across Meta, Google, TikTok, and programmatic as the brief requires. Media spend sits with the client; we recommend and run it.",
       },
       {
         capabilityId: "brand",
         included: true,
-        notes: "Identity, messaging, and guidelines — or a sharpening pass if the brand already has a system.",
+        notes:
+          "Identity, messaging, and guidelines — or a sharpening pass if the brand already has a system. Built to still mean something when the campaign ends.",
       },
       {
         capabilityId: "web",
         included: true,
-        notes: "Site, landing experiences, and conversion work tied to the campaigns we’re running.",
+        notes:
+          "Site, landing experiences, and conversion work tied to the campaigns we’re running — tickets, covers, lists, merch, bookings.",
       },
       {
         capabilityId: "music",
         included: false,
-        notes: "Turn on for artists, tours, labels, and live-music events.",
+        notes:
+          "Turn on for artists, tours, labels, and live-music events. Release campaigns, DSP posture, fanbase, and onsale support.",
       },
       {
         capabilityId: "social",
         included: true,
-        notes: "Content system, community, and amplification so organic and paid pull in the same direction.",
+        notes:
+          "Content system, community, and amplification so organic and paid pull in the same direction. Calendar matches the live calendar.",
       },
     ],
   },
@@ -366,12 +374,12 @@ export const blackRiverEntertainment = createProposal({
       {
         kicker: "In the retainer",
         title: "Digital marketing",
-        body: "Campaign planning, paid strategy, reporting, content, and creative on the named 2026 releases — not a pile of ads without a plan.",
+        body: "Written plan, paid strategy, DSP posture, conversion, budget recs, and a readout after each named 2026 release — not a pile of ads without a plan.",
       },
       {
         kicker: "In the retainer",
         title: "Strategic social",
-        body: "Direction and campaign content for each release. We set the system and the quality bar, then ship with the teams already around the artist.",
+        body: "System, briefs, campaign content, and a quality bar per artist. We set the direction, then ship with the teams already around them.",
       },
     ],
   },
@@ -424,151 +432,149 @@ export const blackRiverEntertainment = createProposal({
     ],
   },
   scope: {
-    title: "The job is the Fractional CMO job — aimed at this 2026 slate.",
-    body: "This retainer is all-in for campaign planning, reporting, content, and creative. Digital marketing support and strategic social direction sit on the named remaining-2026 releases. Execution that already lives with an artist’s team or The Orchard stays there until Black River wants it to move.",
+    title: "Two services on the slate — with the all-in work named underneath.",
+    body: "Black River asked for digital marketing support and strategic social direction on the remaining 2026 priority releases. The $12,500 retainer is all-in for campaign planning, reporting, content, and creative. Buying stays with The Orchard until you move it. Day-to-day community, a full identity rebuild, and artist sites are available — they are not in this retainer.",
     items: [
       {
         title: "2026 priority-release slate",
         icon: "disc",
         included: true,
         notes:
-          "John Cooper Albright (1 single), Matt Stell (2–3 singles), MaRynn Taylor (1 single + 1 EP), and a TBA male artist as discussed. Digital and social are built around these campaigns for the balance of 2026.",
-      },
-      {
-        title: "Roster marketing leadership",
-        icon: "users",
-        included: true,
-        notes:
-          "A point of view for Albright, Stell, Taylor, and the TBA male artist. Priorities, resourcing, and a quality bar that shows up for every priority release — not only the ones with the most infrastructure.",
-      },
-      {
-        title: "Artist brand & positioning",
-        icon: "sparkles",
-        included: true,
-        notes:
-          "Who each artist is in the market, who they’re for, and how that holds up between campaigns — not just the week of a single.",
-      },
-      {
-        title: "Release campaign architecture",
-        icon: "disc",
-        included: true,
-        notes:
-          "Singles, EPs, and the story between them on this 2026 slate. The plan, the sequence, and the reason it exists — before anything spends.",
-      },
-      {
-        title: "Marketing calendar & sequencing",
-        icon: "calendar",
-        included: true,
-        notes:
-          "Timing across the 2026 priority slate so campaigns don’t cannibalize each other. What’s coming, what waits, and what needs a dedicated push.",
-      },
-      {
-        title: "Cross-functional alignment",
-        icon: "waypoints",
-        included: true,
-        notes:
-          "One marketing plan that A&R, publicity, radio, digital, sales, touring, and management can actually work from.",
-      },
-      {
-        title: "Audience development",
-        icon: "heart",
-        included: true,
-        notes:
-          "Fanbase growth and conversion — from awareness to stream, follow, ticket, and buy. Built for country and the audiences around it.",
+          "Digital and social are built around these campaigns for the balance of 2026 — not a generic roster retainer. Dates and assets lock in kickoff.",
+        includes: [
+          "John Cooper Albright — 1 single",
+          "Matt Stell — 2–3 singles",
+          "MaRynn Taylor — 1 single + 1 EP",
+          "TBA male artist — TBD, as discussed",
+        ],
       },
       {
         title: "Digital marketing support",
         icon: "audio",
         included: true,
         notes:
-          "How digital supports radio and live on each priority release: DSP posture, content, conversion, and the brief for the teams already running the channels.",
+          "How digital supports radio and live on each priority release. We write the plan, the conversion path, and the brief for the teams already running the channels. The Orchard still buys until Black River shifts it.",
+        includes: [
+          "Written digital plan per priority release before anything spends",
+          "Campaign architecture: singles, EPs, and the story between them",
+          "Paid mix, testing plan, and budget recommendations (The Orchard still buys)",
+          "DSP posture and conversion so a hear becomes a save, follow, or ticket",
+          "Audience path from awareness to stream, follow, ticket, and buy",
+          "Budget allocation across the slate and inside each campaign",
+          "Briefs for label digital, The Orchard, and any artist-side digital lead",
+          "Competitive read on country and adjacent formats that changes the next move",
+          "Coordination with touring, management, and promoters on onsales and routing",
+          "One marketing plan A&R, publicity, radio, digital, sales, and management can work from",
+        ],
       },
       {
-        title: "Strategic social media direction",
+        title: "Strategic social direction",
         icon: "share",
         included: true,
         notes:
-          "Strategic social for each 2026 priority release — the system, the brief, and campaign content. We set the quality bar, then work with existing content teams rather than replacing them. Day-to-day community can stay where it already lives.",
+          "The system, the brief, and campaign content for each named release. We set the quality bar and work with existing content teams rather than replacing them. Day-to-day community stays where it already lives.",
+        includes: [
+          "Social system and quality bar per artist — not one playbook for the roster",
+          "Artist positioning that holds between campaigns, not only the week of a single",
+          "Campaign content for each named 2026 release",
+          "Content calendar and sequencing so the four campaigns don’t cannibalize each other",
+          "Briefs for the teams already making content",
+          "Platform-native direction (Reels, TikTok, YouTube, Stories, community posts)",
+          "Brand partnerships and collaborations that serve the artist — not a logo on a post",
+          "Voice and community guidelines the existing team can actually run",
+        ],
       },
       {
-        title: "Paid media strategy",
-        icon: "megaphone",
+        title: "Campaign planning",
+        icon: "calendar",
         included: true,
         notes:
-          "Mix, testing, and budget recommendations. The Orchard currently advises and admins paid media; Black River is open to shifting that in the coming months. Strategy is in this retainer now. Buying and trafficking can move to Thinkswell when you’re ready.",
+          "All-in. A written plan per priority release: digital, social, content, creative, and reporting. Campaigns get a plan before they spend.",
+        includes: [
+          "Kickoff to lock dates, assets, and goals for Albright, Stell, Taylor, and the TBA artist",
+          "Map of what’s already in motion with label staff, each artist’s team, and The Orchard",
+          "Written campaign brief per release — objective, audience, offer, channels, KPIs",
+          "Shared marketing calendar across the 2026 slate",
+          "Working rhythm with Grace, label staff, and each artist’s team",
+          "Asset checklist and deadlines so creative isn’t the bottleneck",
+          "Priorities and resourcing so every priority release gets a real plan — not only the ones with the most infrastructure",
+        ],
       },
       {
-        title: "Creative direction",
+        title: "Content & creative",
         icon: "palette",
         included: true,
         notes:
-          "Campaign content and creative is in the all-in retainer — planning through deliverables for these releases. Existing partners and in-house teams can still make work; Thinkswell can too. A full identity rebuild is a separate project.",
+          "All-in. Campaign content and creative from concept through deliverables for these releases. Existing partners and in-house teams can still make work; Thinkswell can too. A full identity rebuild is a separate project.",
+        includes: [
+          "Campaign concept and art direction for each priority release",
+          "Social and digital assets needed to run the campaign (static, short-form, covers, ads)",
+          "Copy and messaging aligned to each artist’s voice",
+          "Templates and a quality bar existing teams can produce against",
+          "Production of campaign content when the artist doesn’t already have a maker",
+          "Review and polish of work coming from management or in-house",
+          "Not photography crews, video production days, or a full brand-identity rebuild",
+        ],
       },
       {
-        title: "Brand partnerships & collaborations",
-        icon: "handshake",
-        included: true,
-        notes:
-          "Marketing collaborations, brand partnerships, and synch-adjacent opportunities that actually serve the artist — not just a logo on a post.",
-      },
-      {
-        title: "Touring & live marketing",
-        icon: "ticket",
-        included: true,
-        notes:
-          "Coordination with touring, management, and promoters so onsales, routing, and content support the same story as the release.",
-      },
-      {
-        title: "Budget planning & allocation",
-        icon: "dollar",
-        included: true,
-        notes:
-          "Where the money goes across the 2026 slate and inside a campaign. Recommendations, tradeoffs, and a clear record of what we spent against.",
-      },
-      {
-        title: "Team & vendor oversight",
-        icon: "usercog",
-        included: true,
-        notes:
-          "Working with managers, publicists, digital, The Orchard, creative, and freelancers already on the artist. We don’t add a parallel org chart.",
-      },
-      {
-        title: "Measurement, reporting & insight",
+        title: "Reporting",
         icon: "chart",
         included: true,
         notes:
-          "What moved streams, audience, tickets, and why — per release, not a vanity dashboard. Reporting is in the all-in retainer.",
-      },
-      {
-        title: "Competitive & market intelligence",
-        icon: "radar",
-        included: true,
-        notes:
-          "What’s working in country and adjacent formats, and what it means for Black River’s next move — not a research binder that sits in a drawer.",
+          "All-in. What moved streams, audience, tickets, and why — per release, not a vanity dashboard. The label should be able to use the readout in a marketing meeting.",
+        includes: [
+          "Measurement plan at kickoff — what we count, where the data lives, what we ignore",
+          "Per-release readout the label can actually walk through",
+          "Monthly view of what’s working, what’s not, and where recommended spend went",
+          "Creative notes — what the audience responded to, and what we kill",
+          "Stream, audience, and live-support movement where marketing has a lever",
+          "Recommendation for the next campaign before the last one goes cold",
+        ],
       },
       {
         capabilityId: "paid",
         included: false,
         notes:
-          "The Orchard currently advises and admins paid. When Black River wants to make that shift, Thinkswell can take buying, trafficking, and always-on — written as a separate SOW or folded into the retainer.",
+          "The Orchard currently advises and admins paid. Strategy is in this retainer. When Black River wants to shift buying, Thinkswell can take it as a separate SOW or fold it into the retainer.",
+        includes: [
+          "Buying and trafficking on Meta, Google, TikTok, YouTube, and programmatic as needed",
+          "Always-on plus release flights",
+          "In-platform creative testing and pacing",
+          "Weekly spend-vs-plan reporting",
+        ],
       },
       {
         capabilityId: "social",
         included: false,
         notes:
-          "Strategic direction and campaign content are in the retainer. Day-to-day community management can be added when a client doesn’t already have that team.",
+          "Strategic direction and campaign content are in the retainer. Day-to-day community management can be added when an artist doesn’t already have that team.",
+        includes: [
+          "Daily community management and voice in comments/DMs",
+          "Always-on posting between campaigns",
+          "Creator/community programs beyond a single release",
+        ],
       },
       {
         capabilityId: "brand",
         included: false,
         notes:
-          "Brand strategy and creative direction are in the retainer. A full identity system or guidelines rebuild is a separate project.",
+          "Positioning and campaign creative direction are in the retainer. A full identity system or guidelines rebuild is a separate project.",
+        includes: [
+          "Visual identity system (logo, type, color, art direction)",
+          "Messaging framework and voice guidelines",
+          "Brand guidelines the rest of the team can actually use",
+        ],
       },
       {
         capabilityId: "web",
         included: false,
         notes:
           "Not in this retainer. Artist sites, landing pages, and conversion work can be scoped when a campaign needs them.",
+        includes: [
+          "Artist or campaign landing pages",
+          "Site design, build, and launch",
+          "Conversion and tracking tied to the release",
+        ],
       },
     ],
   },

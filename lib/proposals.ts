@@ -348,7 +348,7 @@ export const blackRiverEntertainment = createProposal({
   clientUrl: "https://www.blackriverent.com",
   clientIndustry: "Record label · Music",
   summary:
-    "Marketing Consultant for Black River's remaining 2026 priority releases at $11,000 a month. Digital marketing support and strategic social direction, all-in for campaign planning, reporting, content, creative, brand development, and campaign-specific web.",
+    "Marketing Consultant for Black River's remaining 2026 priority releases at $11,500 a month. Digital marketing support and strategic social direction, all-in for campaign planning, reporting, content, creative, brand development, and campaign-specific web.",
   preparedFor: "Black River Entertainment",
   preparedDate: "2026-08-21",
   validUntil: "2026-09-19",
@@ -358,11 +358,11 @@ export const blackRiverEntertainment = createProposal({
     "A Marketing Consultant on the remaining 2026 slate, working with the teams already in the building.",
   heroAccent: "Think smart.",
   intro:
-    "Black River asked for digital marketing support and strategic social direction on the remaining 2026 priority releases: John Cooper Albright, Matt Stell, MaRynn Taylor, and a TBA male artist. Thinkswell would sit as Marketing Consultant for that slate at $11,000 a month. Campaign planning, reporting, content, creative, brand development, and campaign-specific web are in the retainer. Social strategy is in. Daily social media management is not. The Orchard currently advises and admins paid media, and we can take that when you're ready.",
+    "Black River asked for digital marketing support and strategic social direction on the remaining 2026 priority releases: John Cooper Albright, Matt Stell, MaRynn Taylor, and a TBA male artist. Thinkswell would sit as Marketing Consultant for that slate at $11,500 a month. Campaign planning, reporting, content, creative, brand development, and campaign-specific web are in the retainer. Social strategy is in. Daily social media management is not. The Orchard currently advises and admins paid media, and we can take that when you're ready.",
   visual: {
     stats: [
-      { value: "$11,000", label: "All-in monthly" },
-      { value: "$132,000", label: "Annualized" },
+      { value: "$11,500", label: "All-in monthly" },
+      { value: "$138,000", label: "Annualized" },
       { value: "4 artists", label: "Digital + social" },
     ],
     releases: {
@@ -417,7 +417,7 @@ export const blackRiverEntertainment = createProposal({
   },
   approach: {
     title: "One Marketing Consultant for digital and social.",
-    body: "Thinkswell sits as Black River's Marketing Consultant for the remaining 2026 priority releases. Digital marketing support and strategic social direction, with campaign planning, reporting, content, creative, brand development, and campaign-specific web in the $11,000 retainer. Daily social media management is not included.",
+    body: "Thinkswell sits as Black River's Marketing Consultant for the remaining 2026 priority releases. Digital marketing support and strategic social direction, with campaign planning, reporting, content, creative, brand development, and campaign-specific web in the $11,500 retainer. Daily social media management is not included.",
     steps: [
       {
         number: "01",
@@ -437,8 +437,8 @@ export const blackRiverEntertainment = createProposal({
     ],
   },
   scope: {
-    title: "What the $11,000 retainer covers, named in full.",
-    body: "Black River asked for digital marketing support and strategic social direction on the remaining 2026 priority releases. The $11,000 retainer is all-in for campaign planning, reporting, content, creative, brand development, and campaign-specific web, plus the weekly cadence to run it. Social strategy is in. Daily social media management is not. Buying stays with The Orchard until you move it. Full artist sites and daily community can be added. They are not in this retainer.",
+    title: "What the $11,500 retainer covers, named in full.",
+    body: "Black River asked for digital marketing support and strategic social direction on the remaining 2026 priority releases. The $11,500 retainer is all-in for campaign planning, reporting, content, creative, brand development, and campaign-specific web, plus the weekly cadence to run it. Social strategy is in. Daily social media management is not. Buying stays with The Orchard until you move it. Full artist sites and daily community can be added. They are not in this retainer.",
     items: [
       {
         title: "2026 priority-release slate",
@@ -661,19 +661,19 @@ export const blackRiverEntertainment = createProposal({
   },
   investment: {
     title: "One monthly retainer. All-in for planning, brand, campaign web, content, creative, and cadence.",
-    body: "The $11,000 monthly retainer covers digital marketing support and strategic social direction on the 2026 priority slate: campaign planning, reporting, content, creative, brand development, campaign-specific web, and the weekly cadence to run it. Social strategy is in. Daily social media management is not. Media spend stays with Black River. The Orchard currently advises and admins paid. Thinkswell can take that when you want to shift.",
+    body: "The $11,500 monthly retainer covers digital marketing support and strategic social direction on the 2026 priority slate: campaign planning, reporting, content, creative, brand development, campaign-specific web, and the weekly cadence to run it. Social strategy is in. Daily social media management is not. Media spend stays with Black River. The Orchard currently advises and admins paid. Thinkswell can take that when you want to shift.",
     highlight: {
       label: "Proposed retainer",
-      amount: "$11,000",
+      amount: "$11,500",
       cadence: "per month, all-in",
       detail:
         "Campaign planning, reporting, content, creative, brand development, campaign-specific web, and weekly cadence across the remaining 2026 priority releases. Proposed for the balance of 2026.",
-      secondary: { amount: "$132,000", label: "annualized" },
+      secondary: { amount: "$138,000", label: "annualized" },
     },
     models: [
       {
         name: "Monthly retainer",
-        amount: "$11,000",
+        amount: "$11,500",
         bestFor: "Digital marketing and strategic social on the 2026 priority slate",
         howWeScope:
           "All-in for campaign planning, reporting, content, creative, brand development, campaign-specific web, and cadence. Social strategy is in. Daily social media management is not. Marketing Consultant for Albright, Stell, Taylor, and the TBA male artist.",
@@ -693,7 +693,7 @@ export const blackRiverEntertainment = createProposal({
           "Sits with Black River or the artist. We recommend and brief. We don't mark it up.",
       },
     ],
-    note: "Proposed retainer: $11,000 per month, all-in for campaign planning, reporting, content, creative, brand development, campaign-specific web, and cadence ($132,000 annualized). Daily social media management is not included. Media spend, photography, video production, influencers, and radio promo buys sit with Black River or the artist. The Orchard continues to advise and admin paid until Black River wants that to move. Term and notice to be confirmed at kickoff.",
+    note: "Proposed retainer: $11,500 per month, all-in for campaign planning, reporting, content, creative, brand development, campaign-specific web, and cadence ($138,000 annualized). Daily social media management is not included. Media spend, photography, video production, influencers, and radio promo buys sit with Black River or the artist. The Orchard continues to advise and admin paid until Black River wants that to move. Term and notice to be confirmed at kickoff.",
   },
   success: {
     title: "We measure whether each priority release had a plan, and whether it moved something.",
@@ -714,7 +714,7 @@ export const blackRiverEntertainment = createProposal({
     steps: [
       "Walk the remaining 2026 slate together: Albright, Stell, Taylor, and the TBA male artist. Dates, assets, what's already booked.",
       "Map what's already in motion with The Orchard, Tanya, and each artist's team.",
-      "Confirm the $11,000 all-in monthly retainer, a start date, and who sits in the weekly working session.",
+      "Confirm the $11,500 all-in monthly retainer, a start date, and who sits in the weekly working session.",
       "Kickoff begins with the first priority release. Nothing launches until we agree on the why.",
     ],
   },

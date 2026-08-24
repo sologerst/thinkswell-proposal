@@ -29,6 +29,7 @@ import {
 import { capabilities, brand } from "@/lib/brand";
 import type { Proposal, ScopeDutyIcon } from "@/lib/proposals";
 import { clientInitials, formatDate } from "@/lib/utils";
+import { ProposalSectionNav } from "@/components/proposal-section-nav";
 import { Eyebrow } from "@/components/site-header";
 
 const dutyIcons: Record<ScopeDutyIcon, LucideIcon> = {
@@ -250,23 +251,7 @@ export function ProposalDocument({ proposal }: { proposal: Proposal }) {
       </section>
 
       <div className="mx-auto max-w-6xl px-6">
-        <nav
-          aria-label="Proposal sections"
-          className="print:hidden sticky top-0 z-10 -mx-6 mb-4 border-b border-white/8 bg-background/85 px-6 py-3 backdrop-blur-md"
-        >
-          <ul className="flex gap-5 overflow-x-auto text-[12px] whitespace-nowrap text-off-white/45">
-            {proposal.sections.map((section) => (
-              <li key={section.id}>
-                <a
-                  className="transition-colors hover:text-teal"
-                  href={`#${section.id}`}
-                >
-                  {section.title}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <ProposalSectionNav sections={proposal.sections} />
 
         <Section
           id="opportunity"
@@ -728,7 +713,10 @@ function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className="scroll-mt-20 border-b border-white/8 py-16">
+    <section
+      id={id}
+      className="scroll-mt-32 border-b border-white/8 py-16 md:scroll-mt-24"
+    >
       <Eyebrow className="text-teal/80">{kicker}</Eyebrow>
       <h2 className="mt-4 max-w-4xl font-serif text-3xl leading-tight font-bold text-off-white sm:text-5xl">
         {title}

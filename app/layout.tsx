@@ -63,7 +63,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${playfair.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={`${spaceGrotesk.variable} ${playfair.variable} ${jetbrainsMono.variable} h-full scroll-pt-32 antialiased md:scroll-pt-24`}
     >
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground">
         <script

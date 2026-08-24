@@ -2,7 +2,7 @@
   "name": "thinkswell-proposal",
   "version": "0.1.0",
   "private": true,
-  "description": "Thinkswell Proposal Hub — client proposals at proposal.thinkswell.com",
+  "description": "Thinkswell Proposal Hub. Client proposals at proposal.thinkswell.com",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

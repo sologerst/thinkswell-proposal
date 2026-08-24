@@ -34,9 +34,9 @@ export default async function Home({ searchParams }: PageProps) {
           Client Proposal <span className="text-teal">Hub</span>
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-off-white/60">
-          A centralized workspace for Thinkswell client proposals. Duplicate the
-          branded template, fill in the opportunity and investment, and share a
-          live link from{" "}
+          Where Thinkswell client proposals live. Duplicate the branded
+          template, fill in the opportunity and investment, and share a live
+          link from{" "}
           <span className="text-off-white">proposal.thinkswell.com</span>.
         </p>
         <p className="mt-4 text-sm text-off-white/40">

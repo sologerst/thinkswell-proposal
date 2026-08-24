@@ -347,17 +347,17 @@ export const blackRiverEntertainment = createProposal({
   clientUrl: "https://www.blackriverent.com",
   clientIndustry: "Record label · Music",
   summary:
-    "Fractional CMO for Black River's remaining 2026 priority releases at $11,000 a month. Digital marketing support and strategic social direction, all-in for campaign planning, reporting, content, and creative.",
+    "Marketing Consultant for Black River's remaining 2026 priority releases at $11,000 a month. Digital marketing support and strategic social direction, all-in for campaign planning, reporting, content, and creative.",
   preparedFor: "Black River Entertainment",
   preparedDate: "2026-08-21",
   validUntil: "2026-09-19",
   status: "draft",
   heroEyebrow: "Partnership proposal",
   heroTitle:
-    "A Fractional CMO on the remaining 2026 slate, working with the teams already in the building.",
+    "A Marketing Consultant on the remaining 2026 slate, working with the teams already in the building.",
   heroAccent: "Think smart.",
   intro:
-    "Black River asked for digital marketing support and strategic social direction on the remaining 2026 priority releases: John Cooper Albright, Matt Stell, MaRynn Taylor, and a TBA male artist. Thinkswell would sit as Fractional CMO for that slate at $11,000 a month. Campaign planning, reporting, content, and creative are in the retainer. The Orchard currently advises and admins paid media, and we can take that when you're ready.",
+    "Black River asked for digital marketing support and strategic social direction on the remaining 2026 priority releases: John Cooper Albright, Matt Stell, MaRynn Taylor, and a TBA male artist. Thinkswell would sit as Marketing Consultant for that slate at $11,000 a month. Campaign planning, reporting, content, and creative are in the retainer. The Orchard currently advises and admins paid media, and we can take that when you're ready.",
   visual: {
     stats: [
       { value: "$11,000", label: "All-in monthly" },
@@ -389,7 +389,7 @@ export const blackRiverEntertainment = createProposal({
   },
   opportunity: {
     title: "The rest of 2026 has a slate. It needs a digital and social plan the building can run.",
-    body: "Black River named the work: digital marketing support and strategic social direction on the priority releases still on the board this year. John Cooper Albright has a single. Matt Stell has two, maybe three. MaRynn Taylor has a single and an EP. A TBA male artist is in conversation. The Orchard currently advises and admins paid media, and Grace flagged that Black River is open to shifting that in the coming months. Thinkswell will sit as Fractional CMO for this slate: a point of view per release, a calendar the building can work from, and a partner who can sit with management, publicity, radio, digital, The Orchard, and creative without stepping on them.",
+    body: "Black River named the work: digital marketing support and strategic social direction on the priority releases still on the board this year. John Cooper Albright has a single. Matt Stell has two, maybe three. MaRynn Taylor has a single and an EP. A TBA male artist is in conversation. The Orchard currently advises and admins paid media, and Grace flagged that Black River is open to shifting that in the coming months. Thinkswell will sit as Marketing Consultant for this slate: a point of view per release, a calendar the building can work from, and a partner who can sit with management, publicity, radio, digital, The Orchard, and creative without stepping on them.",
     bullets: [
       "Digital and social built around the named 2026 releases: Albright, Stell, Taylor, and the TBA male artist.",
       "All-in for campaign planning, reporting, content, and creative. You get the plan and the work to ship it.",
@@ -415,8 +415,8 @@ export const blackRiverEntertainment = createProposal({
     ],
   },
   approach: {
-    title: "One Fractional CMO seat for digital and social.",
-    body: "Thinkswell sits as Black River's Fractional CMO for the remaining 2026 priority releases. Digital marketing support and strategic social direction, with campaign planning, reporting, content, and creative in the $11,000 retainer.",
+    title: "One Marketing Consultant for digital and social.",
+    body: "Thinkswell sits as Black River's Marketing Consultant for the remaining 2026 priority releases. Digital marketing support and strategic social direction, with campaign planning, reporting, content, and creative in the $11,000 retainer.",
     steps: [
       {
         number: "01",
@@ -552,7 +552,7 @@ export const blackRiverEntertainment = createProposal({
         ],
       },
       {
-        title: "Fractional CMO cadence",
+        title: "Marketing Consultant cadence",
         icon: "usercog",
         included: true,
         notes:
@@ -670,7 +670,7 @@ export const blackRiverEntertainment = createProposal({
         amount: "$11,000",
         bestFor: "Digital marketing and strategic social on the 2026 priority slate",
         howWeScope:
-          "All-in for campaign planning, reporting, content, creative, and cadence. Fractional CMO seat aimed at Albright, Stell, Taylor, and the TBA male artist.",
+          "All-in for campaign planning, reporting, content, creative, and cadence. Marketing Consultant for Albright, Stell, Taylor, and the TBA male artist.",
       },
       {
         name: "Paid media takeover",

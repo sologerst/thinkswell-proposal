@@ -9,6 +9,7 @@ import {
   Disc3,
   Focus,
   Gauge,
+  Globe,
   Handshake,
   Heart,
   Layers,
@@ -49,6 +50,7 @@ const dutyIcons: Record<ScopeDutyIcon, LucideIcon> = {
   usercog: UserCog,
   chart: ChartLine,
   radar: Radar,
+  globe: Globe,
 };
 
 const opportunityIcons = [Brain, Users, Gauge];

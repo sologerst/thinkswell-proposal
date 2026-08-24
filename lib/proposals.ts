@@ -34,7 +34,8 @@ export type ScopeDutyIcon =
   | "dollar"
   | "usercog"
   | "chart"
-  | "radar";
+  | "radar"
+  | "globe";
 
 export type ScopeItem = {
   capabilityId?: (typeof capabilities)[number]["id"];
@@ -347,7 +348,7 @@ export const blackRiverEntertainment = createProposal({
   clientUrl: "https://www.blackriverent.com",
   clientIndustry: "Record label · Music",
   summary:
-    "Marketing Consultant for Black River's remaining 2026 priority releases at $11,000 a month. Digital marketing support and strategic social direction, all-in for campaign planning, reporting, content, and creative.",
+    "Marketing Consultant for Black River's remaining 2026 priority releases at $11,500 a month. Digital marketing support and strategic social direction, all-in for campaign planning, reporting, content, creative, brand development, and campaign-specific web.",
   preparedFor: "Black River Entertainment",
   preparedDate: "2026-08-21",
   validUntil: "2026-09-19",
@@ -357,11 +358,11 @@ export const blackRiverEntertainment = createProposal({
     "A Marketing Consultant on the remaining 2026 slate, working with the teams already in the building.",
   heroAccent: "Think smart.",
   intro:
-    "Black River asked for digital marketing support and strategic social direction on the remaining 2026 priority releases: John Cooper Albright, Matt Stell, MaRynn Taylor, and a TBA male artist. Thinkswell would sit as Marketing Consultant for that slate at $11,000 a month. Campaign planning, reporting, content, and creative are in the retainer. The Orchard currently advises and admins paid media, and we can take that when you're ready.",
+    "Black River asked for digital marketing support and strategic social direction on the remaining 2026 priority releases: John Cooper Albright, Matt Stell, MaRynn Taylor, and a TBA male artist. Thinkswell would sit as Marketing Consultant for that slate at $11,500 a month. Campaign planning, reporting, content, creative, brand development, and campaign-specific web are in the retainer. Social strategy is in. Daily social media management is not. The Orchard currently advises and admins paid media, and we can take that when you're ready.",
   visual: {
     stats: [
-      { value: "$11,000", label: "All-in monthly" },
-      { value: "$132,000", label: "Annualized" },
+      { value: "$11,500", label: "All-in monthly" },
+      { value: "$138,000", label: "Annualized" },
       { value: "4 artists", label: "Digital + social" },
     ],
     releases: {
@@ -383,7 +384,7 @@ export const blackRiverEntertainment = createProposal({
       {
         kicker: "In the retainer",
         title: "Strategic social",
-        body: "A system and quality bar per artist, campaign content, platform-native briefs, and a calendar that doesn't let four campaigns step on each other.",
+        body: "Strategy, a quality bar, campaign content, and a calendar that doesn't let four campaigns step on each other. Daily posting, comments, and DMs are not in this retainer.",
       },
     ],
   },
@@ -392,7 +393,7 @@ export const blackRiverEntertainment = createProposal({
     body: "Black River named the work: digital marketing support and strategic social direction on the priority releases still on the board this year. John Cooper Albright has a single. Matt Stell has two, maybe three. MaRynn Taylor has a single and an EP. A TBA male artist is in conversation. The Orchard currently advises and admins paid media, and Black River is open to shifting that in the coming months. Thinkswell will sit as Marketing Consultant for this slate: a point of view per release, a calendar the building can work from, and a partner who can sit with management, publicity, radio, digital, The Orchard, and creative without stepping on them.",
     bullets: [
       "Digital and social built around the named 2026 releases: Albright, Stell, Taylor, and the TBA male artist.",
-      "All-in for campaign planning, reporting, content, and creative. You get the plan and the work to ship it.",
+      "All-in for campaign planning, reporting, content, creative, brand development, and campaign-specific web. Social strategy is in. Daily social media management is not.",
       "Paid can stay with The Orchard until Black River wants to move it. We write the brief they buy against, and we plan for a clean handoff if you shift.",
     ],
   },
@@ -416,7 +417,7 @@ export const blackRiverEntertainment = createProposal({
   },
   approach: {
     title: "One Marketing Consultant for digital and social.",
-    body: "Thinkswell sits as Black River's Marketing Consultant for the remaining 2026 priority releases. Digital marketing support and strategic social direction, with campaign planning, reporting, content, and creative in the $11,000 retainer.",
+    body: "Thinkswell sits as Black River's Marketing Consultant for the remaining 2026 priority releases. Digital marketing support and strategic social direction, with campaign planning, reporting, content, creative, brand development, and campaign-specific web in the $11,500 retainer. Daily social media management is not included.",
     steps: [
       {
         number: "01",
@@ -426,7 +427,7 @@ export const blackRiverEntertainment = createProposal({
       {
         number: "02",
         title: "Install the campaign cadence.",
-        body: "A written plan per priority release: digital, social, DSP, content, creative, and reporting. Shared calendar across the four campaigns. Weekly working session with Tanya and whoever owns the next Friday. Campaigns get a plan before they spend.",
+        body: "A written plan per priority release: digital, social, brand, campaign web, DSP, content, creative, and reporting. Shared calendar across the four campaigns. Weekly working session with Tanya and whoever owns the next Friday. Campaigns get a plan before they spend.",
       },
       {
         number: "03",
@@ -436,8 +437,8 @@ export const blackRiverEntertainment = createProposal({
     ],
   },
   scope: {
-    title: "What the $11,000 retainer covers, named in full.",
-    body: "Black River asked for digital marketing support and strategic social direction on the remaining 2026 priority releases. The $11,000 retainer is all-in for campaign planning, reporting, content, and creative, plus the weekly cadence to run it. Buying stays with The Orchard until you move it. Day-to-day community, a full identity rebuild, and artist sites are available. They are not in this retainer.",
+    title: "What the $11,500 retainer covers, named in full.",
+    body: "Black River asked for digital marketing support and strategic social direction on the remaining 2026 priority releases. The $11,500 retainer is all-in for campaign planning, reporting, content, creative, brand development, and campaign-specific web, plus the weekly cadence to run it. Social strategy is in. Daily social media management is not. Buying stays with The Orchard until you move it. Full artist sites and daily community can be added. They are not in this retainer.",
     items: [
       {
         title: "2026 priority-release slate",
@@ -481,7 +482,7 @@ export const blackRiverEntertainment = createProposal({
         icon: "share",
         included: true,
         notes:
-          "The system, the brief, and campaign content for each named release. We set the quality bar and work with existing content teams rather than replacing them. Day-to-day community stays where it already lives.",
+          "Strategy is in this retainer. Daily social media management is not. We set the system, the brief, the quality bar, and campaign content for each named release. We work with existing content teams rather than replacing them. Daily posting, comments, DMs, and always-on community stay where they already live, or as an add-on.",
         includes: [
           "Social system and quality bar per artist. Each one is different",
           "Artist positioning that holds between campaigns, not only the week of a single",
@@ -498,11 +499,42 @@ export const blackRiverEntertainment = createProposal({
         ],
       },
       {
+        title: "Brand development",
+        icon: "sparkles",
+        included: true,
+        notes:
+          "Campaign and artist identity for the 2026 slate. Positioning, visual system, voice, and guidelines so each named release has a look that holds. Sharpen existing identities where they already work. A full Black River label rebrand is a separate project.",
+        includes: [
+          "Positioning and messaging for each named artist",
+          "Visual identity: logo, type, color, photography and art direction",
+          "Voice and copy guidelines the rest of the team can write from",
+          "Brand guidelines the team can open and use",
+          "Launch kit for social, web, and campaign applications",
+          "Sharpening pass if the identity already exists and just needs to hold up",
+          "Full Black River label rebrand sits outside this retainer",
+        ],
+      },
+      {
+        title: "Web development",
+        icon: "globe",
+        included: true,
+        notes:
+          "As needed for a named 2026 campaign. Landing pages, pre-save and smart-link destinations, conversion and tracking when a release needs them. Not a full artist site rebuild.",
+        includes: [
+          "Campaign landing pages when a release needs a destination",
+          "Pre-save and smart-link destinations tied to the release",
+          "Conversion and tracking wired to the readout",
+          "Analytics, pixels, and event tracking for the campaign",
+          "Handoff so label digital can run it after launch",
+          "Full artist or label site rebuilds sit outside this retainer",
+        ],
+      },
+      {
         title: "Campaign planning",
         icon: "calendar",
         included: true,
         notes:
-          "All-in. A written plan per priority release: digital, social, content, creative, and reporting. Campaigns get a plan before they spend.",
+          "All-in. A written plan per priority release: digital, social, brand, campaign web, content, creative, and reporting. Campaigns get a plan before they spend.",
         includes: [
           "Kickoff to lock dates, assets, and goals for Albright, Stell, Taylor, and the TBA artist",
           "Map of what's already in motion with label staff, each artist's team, and The Orchard",
@@ -520,7 +552,7 @@ export const blackRiverEntertainment = createProposal({
         icon: "palette",
         included: true,
         notes:
-          "All-in. Campaign content and creative from concept through deliverables for these releases. Existing partners and in-house teams can still make work. Thinkswell can too. A full identity rebuild is a separate project.",
+          "All-in. Campaign content and creative from concept through deliverables for these releases. Existing partners and in-house teams can still make work. Thinkswell can too. Photography crews and video production days sit outside this retainer.",
         includes: [
           "Campaign concept and art direction for each priority release",
           "Social and digital assets to run the campaign: static, short-form, covers, ads, Stories",
@@ -531,7 +563,7 @@ export const blackRiverEntertainment = createProposal({
           "Production of campaign content when the artist doesn't already have a maker",
           "Review and polish of work coming from management or in-house",
           "File naming, specs, and handoff so The Orchard and label digital can traffic without hunting for files",
-          "Photography crews, video production days, and a full brand-identity rebuild sit outside this retainer",
+          "Photography crews and video production days sit outside this retainer",
         ],
       },
       {
@@ -583,42 +615,16 @@ export const blackRiverEntertainment = createProposal({
         ],
       },
       {
-        capabilityId: "social",
+        title: "Daily social media management",
         included: false,
         notes:
-          "Strategic direction and campaign content are in the retainer. Day-to-day community management can be added when an artist doesn't already have that team.",
+          "Not in this retainer. Social strategy, campaign content, and the quality bar already are. Add this when an artist needs someone in comments, DMs, and the feed between campaigns.",
         includes: [
-          "Daily community management and voice in comments and DMs",
-          "Always-on posting between campaigns",
+          "Daily posting, comments, and DMs",
+          "Always-on community management between campaigns",
           "Community calendar that matches touring and radio weeks",
           "Creator and community programs beyond a single release",
           "Inbox and comment triage with a weekly recap",
-        ],
-      },
-      {
-        capabilityId: "brand",
-        included: false,
-        notes:
-          "Positioning and campaign creative direction are in the retainer. A full identity system or guidelines rebuild is a separate project.",
-        includes: [
-          "Visual identity system: logo, type, color, art direction",
-          "Messaging framework and voice guidelines",
-          "Artist-level visual refresh without a full label rebrand",
-          "Brand guidelines the rest of the team can open and use",
-          "Launch kit for social, web, and campaign applications",
-        ],
-      },
-      {
-        capabilityId: "web",
-        included: false,
-        notes:
-          "Not in this retainer. Artist sites, landing pages, and conversion work can be scoped when a campaign needs them.",
-        includes: [
-          "Artist or campaign landing pages",
-          "Pre-save and smart-link destinations tied to the release",
-          "Site design, build, and launch",
-          "Conversion and tracking wired to the readout",
-          "Handoff, training, and a punch list after launch",
         ],
       },
     ],
@@ -643,7 +649,7 @@ export const blackRiverEntertainment = createProposal({
         name: "Through Q4 · Run the 2026 slate",
         window: "Balance of 2026",
         detail:
-          "Digital marketing and strategic social on each remaining priority release. Weekly working session. Campaign planning, content, creative, and reporting, all-in. Hands-on where the campaign needs it.",
+          "Digital marketing and strategic social on each remaining priority release. Brand development and campaign-specific web as the slate needs them. Weekly working session. Campaign planning, content, creative, and reporting, all-in.",
       },
       {
         name: "When you're ready · Paid shift",
@@ -654,23 +660,23 @@ export const blackRiverEntertainment = createProposal({
     ],
   },
   investment: {
-    title: "One monthly retainer. All-in for planning, reporting, content, creative, and cadence.",
-    body: "The $11,000 monthly retainer covers digital marketing support and strategic social direction on the 2026 priority slate: campaign planning, reporting, content, creative, and the weekly cadence to run it. Media spend stays with Black River. The Orchard currently advises and admins paid. Thinkswell can take that when you want to shift.",
+    title: "One monthly retainer. All-in for planning, brand, campaign web, content, creative, and cadence.",
+    body: "The $11,500 monthly retainer covers digital marketing support and strategic social direction on the 2026 priority slate: campaign planning, reporting, content, creative, brand development, campaign-specific web, and the weekly cadence to run it. Social strategy is in. Daily social media management is not. Media spend stays with Black River. The Orchard currently advises and admins paid. Thinkswell can take that when you want to shift.",
     highlight: {
       label: "Proposed retainer",
-      amount: "$11,000",
+      amount: "$11,500",
       cadence: "per month, all-in",
       detail:
-        "Campaign planning, reporting, content, creative, and weekly cadence across the remaining 2026 priority releases. Proposed for the balance of 2026.",
-      secondary: { amount: "$132,000", label: "annualized" },
+        "Campaign planning, reporting, content, creative, brand development, campaign-specific web, and weekly cadence across the remaining 2026 priority releases. Proposed for the balance of 2026.",
+      secondary: { amount: "$138,000", label: "annualized" },
     },
     models: [
       {
         name: "Monthly retainer",
-        amount: "$11,000",
+        amount: "$11,500",
         bestFor: "Digital marketing and strategic social on the 2026 priority slate",
         howWeScope:
-          "All-in for campaign planning, reporting, content, creative, and cadence. Marketing Consultant for Albright, Stell, Taylor, and the TBA male artist.",
+          "All-in for campaign planning, reporting, content, creative, brand development, campaign-specific web, and cadence. Social strategy is in. Daily social media management is not. Marketing Consultant for Albright, Stell, Taylor, and the TBA male artist.",
       },
       {
         name: "Paid media takeover",
@@ -687,7 +693,7 @@ export const blackRiverEntertainment = createProposal({
           "Sits with Black River or the artist. We recommend and brief. We don't mark it up.",
       },
     ],
-    note: "Proposed retainer: $11,000 per month, all-in for campaign planning, reporting, content, creative, and cadence ($132,000 annualized). Media spend, photography, video production, influencers, and radio promo buys sit with Black River or the artist. The Orchard continues to advise and admin paid until Black River wants that to move. Term and notice to be confirmed at kickoff.",
+    note: "Proposed retainer: $11,500 per month, all-in for campaign planning, reporting, content, creative, brand development, campaign-specific web, and cadence ($138,000 annualized). Daily social media management is not included. Media spend, photography, video production, influencers, and radio promo buys sit with Black River or the artist. The Orchard continues to advise and admin paid until Black River wants that to move. Term and notice to be confirmed at kickoff.",
   },
   success: {
     title: "We measure whether each priority release had a plan, and whether it moved something.",
@@ -708,7 +714,7 @@ export const blackRiverEntertainment = createProposal({
     steps: [
       "Walk the remaining 2026 slate together: Albright, Stell, Taylor, and the TBA male artist. Dates, assets, what's already booked.",
       "Map what's already in motion with The Orchard, Tanya, and each artist's team.",
-      "Confirm the $11,000 all-in monthly retainer, a start date, and who sits in the weekly working session.",
+      "Confirm the $11,500 all-in monthly retainer, a start date, and who sits in the weekly working session.",
       "Kickoff begins with the first priority release. Nothing launches until we agree on the why.",
     ],
   },
